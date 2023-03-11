@@ -1,0 +1,2113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+}
+
+.body-LIS {
+    background-color: #fff;
+    background: url(imagens/BG-02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+}
+
+.body-LIS::-webkit-scrollbar {
+    width: 8px;
+}
+
+.body-LIS::-webkit-scrollbar-thumb {
+    background-color: rgb(100, 49, 49);
+}
+
+header {
+    z-index: 10 !important;
+}
+
+.header-div-LIS-008{
+
+}
+.header-original-pai-topo-451{
+
+}
+.header-cima-desenvolvedora-icones-002{
+    background-color: rgb(13, 13, 13);
+    position: fixed;
+    width: 100%;
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    height: 40px;
+    z-index: 10;
+}
+.logo-dontnod-header-cima-032{
+    align-items: center;
+
+}
+.div-header-cima-right-005{
+    display: flex;
+    flex-direction: row;
+}
+.lista-cima-header-003{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.link-lista-cima-header-003{
+    text-decoration: none;
+
+}
+.li-header-cima-078{
+    vertical-align: middle;
+    margin-right: 38px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s; /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+    transition-property: color;
+}
+.li-header-cima-078:hover{
+    color: rgb(204, 204, 204);
+}
+.img1-2-icone-cima-header-009{
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s filter;
+}
+.img1-2-icone-cima-header-009:hover{
+    filter: brightness(1.5);
+
+}
+.img1-lis-header-logo{
+    width: 160px;
+    height: 42px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition-timing-function: ease;
+    transition-duration: 1s; /* Essa duração afeta o transition-timing-function */
+    transition: 0.3s transform, 0s background-color; /*Background-color esta ai só de exemplo*//* Lembre de colocar a tag que vc quer aplicar o transition para ele não se aplicar em todo o conteúdo*/ /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+    box-sizing: border-box;
+}
+.img1-lis-header-logo:hover{
+    transform: scale(1.03);
+
+}
+.itens-lista-header-LIS-004{
+    display: flex;
+    position: relative;
+    left: 63px;
+    align-items: center;
+}
+
+.LIS-ul-li-header{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: rgb(0,0,0,0.75);
+    padding: 15px 10px 10px 20px;
+    align-items: center;
+    position: fixed;
+    right: 0px;
+    top: 39.5px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+#comprar-game {
+    background-color: gray;
+    display: inline-block;
+    padding: 8px 35px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: 1px 1px 3px #0d0d0d27;
+}
+
+.comprar__game {
+    background-color: #f9e33d !important;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    transition: padding 100ms ease-in-out, transform 100ms ease-in-out;
+}
+
+.comprar__game:hover {
+    padding: 8px 45px !important;
+
+}
+
+.comprar__game:active {
+    transform: translateY(1.5px);
+}
+
+#Ocult {
+    pointer-events: none;
+    transform: translateX(-15px);
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+    animation: sumir 400ms both 500ms ease-in-out;
+}
+
+@keyframes sumir {
+    100% {
+        position: absolute;
+        z-index: -10;
+    }
+}
+
+#Ocult2 {
+    pointer-events: none;
+    transform: translateX(-15px);
+    opacity: 0;
+    display: none;
+}
+
+.LIS-ul-li-header input {
+    width: 0px;
+}
+
+.div-logo-lista-conjunto-087{
+    display: flex;
+}
+
+#menu-oculto {
+    position: absolute;
+    opacity: 0;
+}
+
+.logo-header-div-002{
+    width: 14%;
+
+}
+
+.item-li-cabecalho{
+    margin: 0 0 0 15px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    transition: 0.5s color; /* Lembre de colocar a tag que vc quer aplicar o transition para ele não se aplicar em todo o conteúdo*/  /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+}
+.item-li-cabecalho:hover{
+    color: rgba(255,255,255, 1);
+
+}
+.informativo-div-020{
+    color: #000000;
+    background-color: #fff;
+    padding: 8px 35px;
+    margin-right: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.LIS-ul-li-header label {
+    display: none;
+}
+
+.video-2-home-index-trailer-inicial-remastered-lis-802{
+    display: none;
+}
+.div-espaço-para-itens-baixo-759{
+    display: block;
+    height: 115px;
+}
+.compre-div-div-div-img-remastered-true-colors-126{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0 20px 60px;
+
+}
+
+.compre-div-div-img-remastered-true-colors-176{
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: transform 350ms ease-in-out;
+}
+
+.compre-div-div-img-remastered-true-colors-176:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.compre-div-img-remastered-true-colors-052{
+    display: flex;
+    flex-direction: column;
+
+}
+.div-img-lis-logo-vMEWnV7nR-png-094{
+    padding: 10px;
+    margin-left: 40px;
+
+}
+.img-lis-logo-vMEWnV7nR-png-095{
+    width: 200px;
+
+}
+.img-true-colors-remastered-lis-compre-911{
+    width: 390px;
+}
+.div-div-button-reserve-ja-collection-true-remastered-017{
+    display: block;
+    text-align: end;
+    padding: 12px;
+}
+
+.div-button-reserve-ja-collection-true-remastered-012{
+    background-color: #f9e33d;
+    display: inline-block;
+    padding: 8px 35px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 3px #0d0d0d27;
+    transition: padding 100ms ease-in-out, transform 100ms ease-in-out, border 100ms ease-in-out;
+}
+
+.div-button-reserve-ja-collection-true-remastered-012:hover{
+    padding: 8px 45px;
+}
+
+.div-button-reserve-ja-collection-true-remastered-012:active{
+    transform: translateY(1.5px);
+}
+
+#escondido-reserve-ja-032{
+    display: none;
+}
+
+.div-div-div-div-assista-trailer-explore-all-seta-baixo-189{
+    display: block;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 40px 0;
+}
+
+.div-div-div-assista-trailer-explore-seta-baixo-109{
+    display: inline-block;
+}
+
+.div-div-assista-trailer-div-explore-seta-baixo-119{
+    display: inline-block;
+}
+
+.div-div-assista-trailer-explore-seta-baixo-009{
+    display: inline-block;
+}
+
+.div-assista-trailer-explore-seta-baixo-006{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-img-remastered-assistir-trailer-explore-992{
+    padding: 0 32px 24px;
+}
+
+.img-lis-log-rngTxDprD-png-assistir-972{
+    width: 100%;
+}
+
+.button-div-div-assita-trailer-p-012{
+    text-align: center;
+    padding-bottom: 23px;
+}
+
+.button-div-assita-trailer-p-011{
+    background-color: #000000;
+    display: inline-block;
+}
+
+.link-trailer-a-remastered-video-821{
+    text-decoration: none;
+}
+
+.button-assita-trailer-p-017{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    cursor: pointer;
+}
+
+.div-div-conjunto-2-div-explore-seta-baixo-juntos-002{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+}
+
+.div-conjunto-2-div-seta-explore-juntos-072{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.div-conjunto-2-div-seta-explore-juntos-072:hover{
+    position: relative;
+    animation-duration: 0.6s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(10px);
+    }
+}
+
+.explore-div-p-ex-047{
+    display: inline-block;
+}
+
+.explore-p-ex-037{
+    color: #000000;
+    background-color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.div-seta-baixo-img-baixo-028{
+    display: inline-block;
+}
+
+.div-seta-baixo-img-baixo-028 img{
+    filter: brightness(20);
+
+}
+
+.div-max-e-chloe-text-img-titulo-678{
+    padding: 80px 0;
+    text-align: center;
+}
+
+.div-max-e-chloe-center-grup-titulo-638{
+    padding: 0 16px;
+    display: inline-block;
+
+}
+
+.div-conjunto-tudo-max-e-chloe-all-754{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.max-e-chloe-div-retornar-arcadia-bay-001{
+    display: inline-block;
+    width: 55%;
+    vertical-align: middle;
+    position: relative;
+    left: 20px;
+    box-sizing: border-box;
+
+}
+
+.div-h3-max-e-chloe-titulo-015{
+    padding: 64px 24px 24px;
+}
+
+.h3-max-e-chloe-titulo-014{
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: start;
+}
+
+.div-info-max-e-chloe-jogos-premiados-008{
+    background-color: #FFF;
+    padding: 40px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.info-max-e-chloe-jogos-premiados-007{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: sans-serif;
+    text-align: left;
+    color:rgba(0, 0, 0, 0.87)
+}
+
+.img-max-e-chloe-div-1-2-075{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 562.67px;
+    height: 392px;
+    background-position-x: center;
+}
+
+.div-conjunto-tudo-return-bay-arcadia-854{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 85px 0 0;
+
+}
+
+.img-return-bay-arcadia-div-2-2-029{
+    vertical-align: middle;
+    display: inline-block;
+    background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 562.67px;
+    height: 392px;
+
+}
+
+.return-bay-div-farol-bay-002{
+    display: inline-block;
+    width: 55%;
+    vertical-align: middle;
+    position: relative;
+    right: 20px;
+    box-sizing: border-box;
+}
+
+.div-return-bay-titulo-085{
+    padding: 64px 24px 24px;
+}
+
+.h3-return-bay-050{
+    font-size: 36px;
+    text-align: end;
+    color: rgba(0, 0, 0, 0.87)
+}
+
+.div-info-return-bay-iluminada-099{
+    background-color: #FFF;
+    padding: 40px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.info-return-bay-cidadezinha-019{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: sans-serif;
+    text-align: left;
+    color:rgba(0, 0, 0, 0.87)
+}
+
+.div-midia-screenshots-videos-cima-006{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 95px 24px 13px;
+}
+
+.div-midia-1-separada-midia-030{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.item-midia-sozinha-midia-070{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 0.06px;
+    font-family: sans-serif;
+    color: #000000DE;
+    padding-left: 32px;
+}
+
+.div-screenshots-videos-2-juntos-003{
+    display: flex;
+}
+
+.div-div-2-screenshots-videos-campo-021{
+    padding: 0 24px;
+
+}
+
+.screenshots-videos-all-in-one-039{
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    cursor: pointer;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 1.55;
+    width: 170px;
+    transition: 0.3s background-color; /* Lembre de colocar a tag que vc quer aplicar o transition para ele não se aplicar em todo o conteúdo*/ /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+}
+
+.screenshots-videos-all-in-one-039:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.screenshots-videos-all-in-one-039:active{
+    border-color: #000;
+}
+
+.name-item-screenshot-video-2-032{
+    text-transform: uppercase;
+    color: #000000DE;
+    line-height: 1.43;
+}
+
+.div-div-div-selecao-imagens-4-midia-screenshots-271 {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-div-selecao-imagens-4-midia-screenshots-071{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 16px 0;
+}
+
+.div-div-selecao-imagens-4-midia-screenshots-07211 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-size: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.div-cobrindo-imagens-4-all-033{
+    margin: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+.div-cobrindo-imagens-4-all-033:hover .svg-expand {
+    display: inline-flex;
+    transform: translateY(-70px);
+    opacity: 1;
+}
+
+.svg-expand {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    bottom: -50;
+    cursor: pointer;
+    transition: 0.4s transform ease-in-out, 0.5s opacity ease-out;
+    opacity: 0;
+
+}
+
+.selecao-imagens-4-midia-screenshots-010{
+    width: 596px;
+    height: 333.75px;
+    cursor: pointer;
+    transition: 0.3s transform, 0.3s filter ease-out; /* ease-out (Animação de saída, quando as coisas estão se movendo fora) -> Começa a animação rápida no início, lento no final*/
+}
+
+.selecao-imagens-4-midia-screenshots-010:hover{
+    filter: contrast(0.5);
+}
+
+.img-midia-01-inline-023{
+    width: 100%;
+}
+
+#selecao-imagens-4-midia-screenshots-011{
+    background: url(imagens/LIS-Midia-01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s transform ease-in-out;
+}
+
+#selecao-imagens-4-midia-screenshots-011:hover{
+    transform: scale(1.05);
+}
+
+#selecao-imagens-4-midia-screenshots-012{
+    background: url(imagens/LIS-Midia-02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s transform ease-in-out;
+}
+
+#selecao-imagens-4-midia-screenshots-012:hover{
+    transform: scale(1.05);
+}
+
+#selecao-imagens-4-midia-screenshots-013{
+    background: url(imagens/LIS-Midia-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s transform ease-in-out;
+}
+
+#selecao-imagens-4-midia-screenshots-013:hover{
+    transform: scale(1.05);
+}
+
+#selecao-imagens-4-midia-screenshots-014{
+    background: url(imagens/LIS-Midia-04.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s transform ease-in-out;
+}
+
+#selecao-imagens-4-midia-screenshots-014:hover{
+    transform: scale(1.05);
+}
+
+.div-conjunto-3-reserve-ja-mudar-regiao-opcoes-regiao-selecione-051{
+    text-align: center;
+
+}
+
+.reserve-ja-3-text-030{
+    font-size: 36px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06px;
+    font-weight: bold;
+    color: #000000DE;
+    padding: 8px;
+
+}
+
+.conjunto-div-div-mudar-e-select-regiao-mudar-2-175{
+    padding: 8px;
+
+}
+
+.conjunto-div-mudar-e-select-regiao-mudar-2-105{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.mudar-regiao-3-item-text-303{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: #000000DE;
+}
+
+.mudar-regiao-3-item-lista-300{
+    font-size: 16px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: #000000DE;
+    background-color: #00000000;
+    border-color: #00000000;
+    cursor: pointer;
+
+
+}
+
+.option-select-3-escolher-regiao-all-763{
+    text-transform: capitalize;
+
+}
+
+.div-selecione-jogo-text-3-088{
+    padding: 8px;
+    height: 47px;
+    display: block;
+
+}
+
+.selecione-jogo-text-item-3-050{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.167;
+    letter-spacing: 0.06px;
+    font-size: 20px;
+    margin-block-start: 1em;
+    color: #000000DE;
+}
+
+.div-div-3-img-bg-compre-ja-true-remastered-lis-2-098{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.div-div-3-img-bg-compre-ja-true-remastered-lis-2-092{
+    padding: 8px;
+}
+
+.div-3-img-bg-compre-ja-true-remastered-lis-2-992{
+    width: 280px;
+    height: 316px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px grey;
+    transition: 0.3s box-shadow ease-in; /* ease-in (Animação de entrada, quando as coisas estão se movendo dentro) -> Começa a animação lento no início, rápido no final*/
+}
+
+.div-3-img-bg-compre-ja-true-remastered-lis-2-992:hover{
+    box-shadow: 0px 4px 18px grey;
+
+}
+
+#div-3-img-bg-id-compre-ja-true-remastered-lis-2-924{
+    background: url(imagens/LIS-Compre-Ja-3-01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-3-img-bg-id-compre-ja-true-remastered-lis-2-910{
+    background: url(imagens/LIS-Compre-Ja-3-02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-3-img-bg-id-compre-ja-true-remastered-lis-2-118{
+    background: url(imagens/LIS-Compre-Ja-3-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dentro-border-img-3-true-remastered-lis-2-972{
+    border: 4px solid #00000000;
+    width: 280px;
+    height: 317px;
+    transition: border 200ms ease-in-out;
+}
+
+#meuId{
+    border-color: #f9e33d;
+}
+
+#show-div {
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -100vh;
+    left: -1000vw;
+    padding: 0 20px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.show__div-exposed {
+    opacity: 1 !important;
+    position: static !important;
+}
+
+.div-div-text-plataforma-escolher-sua-selecione-064{
+    padding: 8px;
+    height: 47px;
+}
+
+.text-selecionar-plataforma-sua-item-title-551{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1.167; /* Aumenta a altura das letras*/
+    letter-spacing: 0.06px; /* Aumenta a distância entre cada letra*/
+    text-transform: uppercase;
+    color: #000000DE;
+    margin-block-start: 1em;
+}
+
+.div-img-6-console-forma-selecionar-066{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    transition: all 400ms ease-in-out;
+}
+
+.div-div-6-div-console-selecionar-all-conjunto-maior-058{
+    padding: 8px;
+    transition: all 200ms ease-in-out;
+}
+
+.div-img-6-cada-forma-console-1-a-6-084{
+    width: 152px;
+    height: 100px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px grey;
+    transition: 0.3s box-shadow ease-in; /* ease-in (Animação de entrada, quando as coisas estão se movendo dentro) -> Começa a animação lento no início, rápido no final*/
+}
+
+.div-img-6-cada-forma-console-1-a-6-084:hover{
+    box-shadow: 0 4px 18px grey;
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-801{
+    background: url(imagens/img-forma-console-01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-802{
+    background: url(imagens/img-forma-console-02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-803{
+    background: url(imagens/img-forma-console-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-804{
+    background: url(imagens/img-forma-console-04.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-805{
+    background: url(imagens/img-forma-console-05.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-img-id-6-cada-forma-console-1-a-6-806{
+    background: url(imagens/img-forma-console-06.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-item-6-1-a-6-forma-console-fonte-187{
+    border: 4px solid #00000000;
+    width: 152px;
+    height: 100px;
+    transition: border 200ms ease-in-out;
+}
+
+.div-img-max-001{
+    background: url('Life-is-Strange-bg4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img-div-max-011{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.div-img-max-e-chloe-yt-lis-cena-butterfly-851 {
+    display: inline-flex;
+    border-width: 0 0 3px;
+    border-style: solid;
+    border-color: rgb(100, 49, 49);
+    box-shadow: 0px 2px 8px grey;
+    position: relative;
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-max-e-chloe-yt-lis-cena-butterfly-881{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-LIS-001{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-LIS-div-101{
+    display: inline-block;
+}
+
+.select-div-idioma-footer-001{
+    padding: 10px;
+}
+
+.select-idioma-footer-008{
+    padding: 7px 5px;
+    font-size: 18px;
+    background-color: #FFF;
+    color: #000000DE;
+    cursor: pointer;
+    outline: 0;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    width: 190px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.select-idioma-footer-008 option {
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.social-div-footer-logo-002{
+    padding: 10px;
+}
+
+.social-item-div-footer-logo-007:hover{
+    filter: brightness(.7);
+}
+
+.img-div-footer-logos-empresas-002{
+    display: inline-block;
+    padding: 25px 40px 40px;
+}
+
+.img-arquivo-logos-002{
+    width: 93px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#logo-18-footer-004{
+    border-radius: 20px;
+}
+
+#bg10-life-logo{
+    width: 150px;
+}
+
+#bg11-life-logo{
+    width: 147px;
+}
+
+.img-arquivo-logos-001{
+    width: 148px;
+    padding: 10px;
+    vertical-align: middle;
+
+}
+
+.div-linha-footer-002{
+    width: 100%;
+    height: 0px;
+    border: solid rgba(255, 255, 255, 0.4);
+    border-width: 0.001px 0 0 0;
+}
+
+.footer-div-paragrafos-full-002{
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.link-footer-direitos-autorais-090{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer-paragrafo-001{
+    text-align: center;
+    padding: 30px;
+    font-family: interstate, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.lista-footer-029{
+    display: inline-block;
+    padding: 8px;
+    font-family: interstate, sans-serif;
+    font-weight: 300;
+    line-height: 1.43;
+}
+
+.topo-scroll {
+    background-color: #FFFFFF;
+    display: inline-flex;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+    z-index: 10;
+}
+
+.topo-scroll:hover {
+    padding: 2px;
+}
+
+.topo-scroll svg {
+    width: 70%;
+    transform: translateY(-1px);
+}
+/* Device */
+@media screen and (max-device-width: 960px) {
+    .div-conjunto-tudo-max-e-chloe-all-754{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: center;
+    }
+
+    .topo-scroll {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    #stop-explore {
+        animation-duration: 0s;
+        animation: none;
+    }
+
+    .div-conjunto-2-div-seta-explore-juntos-072{
+        position: relative;
+        animation-duration: 0.6s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate-reverse;
+    }
+
+    .div-div-conjunto-2-div-explore-seta-baixo-juntos-002{
+        padding: 10px 0 0;
+        margin-left: 0px !important;
+    }
+    .img-max-e-chloe-div-1-2-075{
+        width: 100% !important;
+        height: 60vw;
+        background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+        background-repeat: no-repeat;
+        background-size: 100vw 60vw;
+
+    }
+    .info-max-e-chloe-jogos-premiados-007{
+        text-align: center;
+    }
+    .div-max-e-chloe-center-grup-titulo-638{
+        padding: 0px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    .img-max-e-chloe-div-1-2-075{
+        background-position-x: 0px !important;
+    }
+    .div-conjunto-tudo-return-bay-arcadia-854{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 75px 0 0;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 100% !important;
+        height: 60vw;
+        background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+        background-size: 100vw 60vw;
+        background-repeat: no-repeat;
+    }
+    .return-bay-div-farol-bay-002{
+        width: 100%;
+        position: static;
+        padding: 0 16px;
+    }
+    .info-return-bay-cidadezinha-019{
+        text-align: center;
+    }
+    .div-return-bay-titulo-085{
+        padding: 32px 24px 16px;
+    }
+    .h3-return-bay-050{
+        text-align: center;
+        font-size: 28px;
+
+    }
+    .max-e-chloe-div-retornar-arcadia-bay-001{
+        width: 100%;
+        position: static;
+        padding: 0 16px;
+
+    }
+    .div-h3-max-e-chloe-titulo-015{
+        padding: 32px 24px 16px;
+    }
+    .h3-max-e-chloe-titulo-014{
+        text-align: center;
+        font-size: 28px;
+    }
+    .div-div-div-div-assista-trailer-explore-all-seta-baixo-189{
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+
+    }
+    .div-button-reserve-ja-collection-true-remastered-012{
+        margin: 0px;
+    }
+    .div-div-button-reserve-ja-collection-true-remastered-312{
+        display: inline-flex;
+        flex-direction: column-reverse;
+    }
+    .div-div-assista-trailer-div-explore-seta-baixo-119{
+
+    }
+    .div-max-e-chloe-text-img-titulo-678{
+        padding: 35px 0 80px !important;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010 {
+        padding: 0px;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010:hover{
+        transform: scale(1.0);
+    }
+    .div-cobrindo-imagens-4-all-033{
+        padding: 0px;
+
+    }
+    #selecao-imagens-4-midia-screenshots-012{
+        display: none;
+    }
+    #selecao-imagens-4-midia-screenshots-013{
+        display: none;
+    }
+    #selecao-imagens-4-midia-screenshots-014{
+        display: none;
+    }
+    #selecao-imagens-4-midia-screenshots-011{
+        background-size: cover;
+        width: 100%;
+        height: 55vw;
+
+    }
+
+    .div-cobrindo-imagens-4-all-033{
+        width: 100%;
+        background-size: 100%;
+
+
+    }
+    .div-div-selecao-imagens-4-midia-screenshots-071{
+        display: flex;
+        width: 100%;
+        background-size: 100%;
+        padding-top: 0px;
+    }
+
+    .div-div-div-selecao-imagens-4-midia-screenshots-271{
+        width: 100%;
+        background-size: 100%;
+    }
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 100%;
+        background-size: 100%;
+
+
+
+    }
+    .div-midia-screenshots-videos-cima-006{
+        flex-direction: column;
+        align-items: center;
+        padding: 74px 0 24px;
+    }
+    .item-midia-sozinha-midia-070{
+        text-align: center;
+        font-size: 28px;
+        padding: 0px;
+    }
+    .div-div-2-screenshots-videos-campo-021 {
+        padding: 0 10px;
+    }
+    .li-header-cima-078{
+        display: none;
+    }
+    .footer-div-paragrafos-full-002{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-family: interstate, sans-serif;
+        font-weight: 300;
+        line-height: 1.43;
+        padding: 16px;
+    }
+    .link-footer-direitos-autorais-090{
+        padding: 8px;
+    }
+    .footer-LIS-001{
+        padding: 40px;
+    }
+    .footer-paragrafo-001{
+        font-size: 18px;
+        font-family: interstate, sans-serif;
+        font-weight: 300;
+        line-height: 1.5;
+        padding: 16px;
+    }
+    .img-div-footer-logos-empresas-002{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .div-screenshots-videos-2-juntos-003{
+        flex-direction: column;
+        font-weight: bold;
+    }
+    .div-button-reserve-ja-collection-true-remastered-012{
+        font-weight: bold;
+    }
+    .button-assita-trailer-p-017{
+        font-weight: bold;
+    }
+    .img-div-max-011{
+        background-size: 900px !important;
+        border-width: 0px !important;
+        border-style: none !important;
+        box-shadow: none !important;
+    }
+
+    .screenshots-videos-all-in-one-039 {
+        padding: 5px 0;
+    }
+
+}
+
+/*Responsivo para Resoluções Maiores*/
+@media screen and (min-width: 1367px) {
+    .div-max-e-chloe-center-grup-titulo-638{
+        padding: 0 16px;
+        width: 1280px;
+        display: inline-block;
+
+    }
+    .footer-LIS-div-101{
+        display: inline-block;
+        width: 1280px;
+
+    }
+}
+/*Max & Chloe / Retorne a Arcadia Bay*/
+@media screen and (max-width: 959px) {
+    .div-max-e-chloe-center-grup-titulo-638{
+        padding: 0px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .div-conjunto-tudo-max-e-chloe-all-754{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: center;
+    }
+    .img-max-e-chloe-div-1-2-075{
+        width: 100%;
+        height: 60vw;
+        background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+        background-repeat: no-repeat;
+        background-size: 100vw 60vw;
+
+    }
+    .info-max-e-chloe-jogos-premiados-007{
+        text-align: center;
+    }
+    .div-conjunto-tudo-return-bay-arcadia-854{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 75px 0 0;
+
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 100%;
+        height: 60vw;
+        background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+        background-size: 100vw 60vw;
+        background-repeat: no-repeat;
+    }
+    .return-bay-div-farol-bay-002{
+        width: 100%;
+        position: static;
+        padding: 0 16px;
+    }
+    .info-return-bay-cidadezinha-019{
+        text-align: center;
+    }
+    .div-return-bay-titulo-085{
+        padding: 32px 24px 16px;
+    }
+    .h3-return-bay-050{
+        text-align: center;
+        font-size: 28px;
+    }
+    .max-e-chloe-div-retornar-arcadia-bay-001{
+        width: 100%;
+        position: static;
+        padding: 0 16px;
+
+    }
+    .div-h3-max-e-chloe-titulo-015{
+        padding: 32px 24px 16px;
+    }
+    .h3-max-e-chloe-titulo-014{
+        text-align: center;
+        font-size: 28px;
+    }
+}
+@media screen
+    and (max-width: 1356px)
+    and (min-width: 1329px) {
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 550px;
+
+    }
+
+    .img-max-e-chloe-div-1-2-075{
+        width: 550px;
+    }
+}
+@media screen and (max-width: 727px) {
+
+}
+
+/*Midia Seleção Screenshots / Videos*/
+@media screen
+    and (max-width: 1336px)
+    and (min-width: 1332px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 594px;
+        height: 320.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 960px)
+    and (min-width: 960px) {
+    .div-conjunto-tudo-return-bay-arcadia-854{
+        display: flex;
+        justify-content: center;
+
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 408.91px;
+        height: 392px;
+
+    }
+     .div-conjunto-tudo-max-e-chloe-all-754{
+        display: flex;
+        justify-content: center;
+
+    }
+    .img-max-e-chloe-div-1-2-075{
+        width: 408.91px;
+        height: 392px;
+
+    }
+    .div-h3-max-e-chloe-titulo-015{
+        text-align: start;
+    }
+
+
+}
+@media screen
+    and (max-width: 1331px)
+    and (min-width: 1329px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 592px;
+        height: 320.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1328px)
+    and (min-width: 1325px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 590px;
+
+
+
+    }
+    .img-max-e-chloe-div-1-2-075{
+        width: 549px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 549px;
+
+    }
+}
+@media screen
+    and (max-width: 1325px)
+    and (min-width: 1325px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 548px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 548px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1324px)
+    and (min-width: 1285px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 580px;
+
+    }
+    .img-max-e-chloe-div-1-2-075{
+        width: 540px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 540px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1305px)
+    and (min-width: 1295px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 535px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 535px;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 570px;
+        height: 320.75px;
+    }
+
+}
+@media screen
+    and (max-width: 1294px)
+    and (min-width: 1284px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 530px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 530px;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 560px;
+        height: 314.75px;
+    }
+}
+@media screen
+    and (max-width: 1283px)
+    and (min-width: 1273px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 525px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 525px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1272px)
+    and (min-width: 1262px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 520px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 520px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1261px)
+    and (min-width: 1251px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 515px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 515px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1250px)
+    and (min-width: 1229px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 505px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 505px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1228px)
+    and (min-width: 1206px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 495px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 495px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1205px)
+    and (min-width: 1184px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 485px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 485px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1183px)
+    and (min-width: 1162px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 475px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 475px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1161px)
+    and (min-width: 1140px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 465px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 465px
+    }
+}
+@media screen
+    and (max-width: 1139px)
+    and (min-width: 1117px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 455px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 455px;
+    }
+
+}
+@media screen
+    and (max-width: 1116px)
+    and (min-width: 1095px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 445px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 445px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1094px)
+    and (min-width: 1073px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 435px;
+        background-position-x: -56px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 435px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1072px)
+    and (min-width: 1051px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 425px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 425px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1050px)
+    and (min-width: 1029px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 415px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 415px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1028px)
+    and (min-width: 1006px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 405px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 405px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1005px)
+    and (min-width: 984px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 395px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 395px;
+
+    }
+
+}
+@media screen
+    and (max-width: 983px)
+    and (min-width: 962px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 385px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 385px;
+
+    }
+
+}
+@media screen
+    and (max-width: 961px)
+    and (min-width: 960px) {
+    .img-max-e-chloe-div-1-2-075{
+        width: 383px;
+    }
+    .img-return-bay-arcadia-div-2-2-029{
+        width: 383px;
+
+    }
+
+}
+@media screen
+    and (max-width: 1284px)
+    and (min-width: 1266px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 560px;
+        height: 314.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1265px)
+    and (min-width: 1225px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 540px;
+        height: 304.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1224px)
+    and (min-width: 1185px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 520px;
+        height: 293.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1184px)
+    and (min-width: 1145px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 500px;
+        height: 280.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1144px)
+    and (min-width: 1105px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 480px;
+        height: 270.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1104px)
+    and (min-width: 1065px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 460px;
+        height: 258.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1064px)
+    and (min-width: 1025px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 440px;
+        height: 247.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 1024px)
+    and (min-width: 985px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 420px;
+        height: 236.75px;
+
+
+    }
+}
+@media screen
+    and (max-width: 984px)
+    and (min-width: 945px) {
+    .selecao-imagens-4-midia-screenshots-010 {
+
+        width: 400px;
+        height: 224.75px;
+
+
+    }
+}
+@media screen and (max-width: 1029px) {
+    .informativo-div-020{
+        margin-right: 0px;
+
+    }
+}
+@media screen and (max-width: 984px) {
+    .img1-lis-header-logo{
+        width: 160px;
+    }
+    .informativo-div-020{
+        display: none;
+
+    }
+
+    .LIS-ul-li-header label {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .logo-header-div-002 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .logo-header-div-002 > a {
+        display: inline-flex;
+    }
+
+    .LIS-ul-li-header {
+        justify-content: flex-end;
+    }
+
+    .LIS-ul-li-header input:focus + .div-logo-lista-conjunto-087 {
+        right: 0;
+    }
+
+    .itens-lista-header-LIS-004 {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        margin: 70px 0 0 0;
+    }
+
+    .item-li-cabecalho{
+        margin: 8px 0;
+        font-size: 1.4em;
+    }
+
+    .div-logo-lista-conjunto-087 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: calc(-90% - 65px);
+        width: calc(90% - 65px);
+        min-height: 100vh;
+        background-color: #0D0D0D;
+        transition: right 400ms 200ms ease-in-out;
+    }
+}
+@media screen and (max-width: 1067px) {
+    .compre-div-div-div-img-remastered-true-colors-126{
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 1082px) {
+    .img-div-max-011{
+        background: url(imagens/lis-re-max-chloe-mastered.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        border-width: 0 0 3px;
+        border-style: solid;
+        border-color: rgb(100, 49, 49);
+        box-shadow: 0px 2px 8px grey;
+    }
+
+    .explore-p-ex-037{
+        color: white;
+        background-color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .div-seta-baixo-img-baixo-028 img{
+        filter: brightness(0);
+
+    }
+
+    .div-img-max-001{
+        background: none;
+    }
+
+    #escondido-reserve-ja-032{
+        display: inline-block;
+        margin: 0px;
+    }
+
+    .div-img-max-e-chloe-yt-lis-cena-butterfly-851{
+        display: none;
+    }
+    .div-escondido-collection-remastered-reserve-ja-013{
+        display: inline-block;
+
+    }
+    .compre-div-div-div-img-remastered-true-colors-126{
+        display: none;
+    }
+    .div-div-assista-trailer-div-explore-seta-baixo-119{
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+}
+
+@media screen
+    and (max-width: 1082px) {
+        .div-div-div-div-assista-trailer-explore-all-seta-baixo-189{
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+        }
+        .div-button-reserve-ja-collection-true-remastered-012{
+            margin: 0px;
+        }
+        .div-div-button-reserve-ja-collection-true-remastered-312{
+            display: inline-flex;
+            flex-direction: column-reverse;
+        }
+        .div-div-assista-trailer-div-explore-seta-baixo-119{
+
+    }
+}
+@media screen and (max-width: 727px) {
+    .compre-div-div-div-img-remastered-true-colors-126{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 959px) {    /* Imagem grande */
+    .div-max-e-chloe-text-img-titulo-678{
+        padding: 35px 0 80px;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010 {
+        padding: 0px;
+
+    }
+    .selecao-imagens-4-midia-screenshots-010:hover{
+        transform: scale(1.0);
+    }
+    .div-cobrindo-imagens-4-all-033{
+        padding: 0px;
+
+    }
+    #selecao-imagens-4-midia-screenshots-012{
+        display: none;
+    }
+    #selecao-imagens-4-midia-screenshots-013{
+        display: none;
+    }
+    #selecao-imagens-4-midia-screenshots-014{
+        display: none;
+    }
+
+}
+@media screen
+    and (max-width: 959px) {
+        #selecao-imagens-4-midia-screenshots-011{
+            background-size: cover;
+            width: 100%;
+            height: 55vw;
+
+        }
+        .div-cobrindo-imagens-4-all-033{
+            width: 100%;
+            background-size: 100%;
+        }
+        .div-div-selecao-imagens-4-midia-screenshots-071{
+            display: flex;
+            width: 100%;
+            background-size: 100%;
+            padding-top: 0px;
+        }
+        .div-div-div-selecao-imagens-4-midia-screenshots-271{
+            width: 100%;
+            background-size: 100%;
+        }
+        .selecao-imagens-4-midia-screenshots-010 {
+
+            width: 100%;
+            background-size: 100%;
+
+
+
+        }
+        .div-midia-screenshots-videos-cima-006{
+            flex-direction: column;
+            align-items: center;
+            padding: 74px 0 24px;
+        }
+        .item-midia-sozinha-midia-070{
+            text-align: center;
+            font-size: 28px;
+            padding: 0px;
+        }
+        .div-div-2-screenshots-videos-campo-021 {
+            padding: 0 10px;
+        }
+    }
+@media screen and (max-width: 765px) {
+    .li-header-cima-078{
+        display: none;
+    }
+
+    .screenshots-videos-all-in-one-039 {
+        padding: 5px 0;
+    }
+}
+
+@media screen
+    and (max-height: 560px) {
+        .compre-div-div-div-img-remastered-true-colors-126 {
+            top: 115px;
+        }
+}
+
+@media screen
+    and (max-height: 439px) {
+        .div-div-conjunto-2-div-explore-seta-baixo-juntos-002 {
+            padding: 16px 0 0;
+        }
+
+        .div-div-div-div-assista-trailer-explore-all-seta-baixo-189 {
+            top: 120px;
+        }
+}

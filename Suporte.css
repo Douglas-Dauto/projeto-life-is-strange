@@ -1,0 +1,151 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.div-img-max-002{
+    width: 100%;
+    height: 785px;
+    background: url(imagens/img-Life-is-Strange-steam-Cards-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 20px 20px;
+    box-sizing: border-box;
+    border-width: 0 0 3px;
+    border-style: solid;
+    border-color: rgb(95, 37, 37);
+    box-shadow: 0px 3px 10px grey;
+    
+}
+.div-ajudar-podemos-suporte-004{
+    width: 90%;
+    margin: 0 auto 20px;
+    
+}
+
+main {
+    text-align: center;
+    padding: 0 0 80px;
+}
+
+.s1 {
+    background-color: rgb(0,0,0,0.75);
+    display: inline-block;
+    width: 90%;
+}
+
+.div-div-ajudar-suporte-problema-002{
+    display: block;
+    background-color: rgb(0,0,0,0.75);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.como-podemos-ajudar-suprote-007{
+    padding: 10px;
+    width: 100%;
+}
+
+.div-form-suporte-problema-005{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px 5px 20px 20px;
+}
+.div-titulo-form-opcoes-089{
+    border-width: 0 0 0.001px 0;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    background-color: rgb(0,0,0,0.75);
+}
+.qual-problema-suporte-080{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    
+    
+}
+.form-problema-tendo-suporte-090{
+    padding: 0 10px 10px;
+}
+.fieldset-1-all-itens-444{
+    border-width: 0px;
+}
+.div-div-problema-tendo-all-076{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+.labels-div-form-qual-problema-072{
+    text-align: start;
+    padding: 10px;
+    width: 400px;      /* Quando o valor do width é em px, ele faz os itens ficarem com o tamanho idêntico (isso se houver mais de 1 item). Em % ele aumenta ou diminui apartir do tamanho que já tem.*/
+    border-width: 0px;
+}
+
+.fieldset-content-023 input {
+    display: inline-block;
+    margin: 0 7px 0 0;
+}
+
+.fieldset-content-023 label {
+    display: inline-block;
+    padding: 6px 6px 6px 0;
+}
+
+.label-form-suporte-life-073{
+    color: #FFFFFFD9;
+    display: block;
+    padding: 6px 6px 6px 15px;
+    font-size: 20px;
+    
+}
+.label-form-suporte-life-073:hover{
+    color: #FFFFFF;
+}
+.submit-enviar-button-form1-pronto-000{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    border-width: 0px;
+}
+.input-form-suporte-life-008{
+    margin-right: 9px;
+    cursor: pointer;
+}
+.check-div-box-notificar-suprote-036{
+    border-radius: 0 0 20px 20px;
+    padding: 0 10px 15px 35px;
+    border-width: 0px;
+    
+}
+.label-suporte-check-notificado-box-786{
+    color: #FFFFFFD9;
+    padding: 3px;
+}
+.label-suporte-check-notificado-box-786:hover{
+    color: #FFFFFF;
+}
+.checkbox-voce-concorda-notificar-suporte-091{
+    margin-right: 7px;
+    cursor: pointer;
+}
+.enviar-pronto-botao-form-009{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-width: 0px;
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s background-color;
+}
+.enviar-pronto-botao-form-009:hover{
+    background-color: rgba(225, 225, 225);
+}
