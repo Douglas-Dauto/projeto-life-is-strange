@@ -1,12 +1,23 @@
-var div1 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[0], div2 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[1], div3 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[2]
-var divConsoles1 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[0], divConsoles2 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[1], divConsoles3 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[2], divConsoles4 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[3], divConsoles5 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[4], divConsoles6 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[5]
-var showDiv = document.getElementById('show-div')
-var scrollButton = document.getElementsByClassName('div-conjunto-2-div-seta-explore-juntos-072')[0]
-var reserveJa = document.getElementsByClassName('div-button-reserve-ja-collection-true-remastered-012')[0]
-var reserveJa1 = document.getElementsByClassName('div-button-reserve-ja-collection-true-remastered-012')[1]
-var comprarGame = document.getElementById('comprar-game')
-var divOculta = document.getElementsByClassName('div-div-6-div-console-selecionar-all-conjunto-maior-058')[5]
-var explore = document.getElementsByClassName('div-conjunto-2-div-seta-explore-juntos-072')[0]
+let div1 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[0], div2 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[1], div3 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[2]
+let divConsoles1 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[0], divConsoles2 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[1], divConsoles3 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[2], divConsoles4 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[3], divConsoles5 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[4], divConsoles6 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[5]
+let showDiv = document.getElementById('show-div')
+let scrollButton = document.getElementsByClassName('div-conjunto-2-div-seta-explore-juntos-072')[0]
+let reserveJa = document.getElementsByClassName('div-button-reserve-ja-collection-true-remastered-012')[0]
+let reserveJa1 = document.getElementsByClassName('div-button-reserve-ja-collection-true-remastered-012')[1]
+let comprarGame = document.getElementById('comprar-game')
+let divOculta = document.getElementsByClassName('div-div-6-div-console-selecionar-all-conjunto-maior-058')[5]
+let explore = document.getElementsByClassName('div-conjunto-2-div-seta-explore-juntos-072')[0]
+let arrayImagens = ['imagens/LIS-Midia-04.png', 'imagens/LIS-Midia-01.png', 'imagens/LIS-Midia-02.png', 'imagens/LIS-Midia-03.png']
+let midiaScreenshots = document.getElementById('midia-screenshots')
+let containerSlide = document.getElementById('container-slide')
+let containerItems = document.getElementById('container-items')
+let previous = document.getElementById('previous')
+let next = document.getElementById('next')
+let primeiraImagem = document.getElementsByClassName('img-all')
+let expand = document.getElementsByClassName('svg-expand__script')
+let expandCarrosel = document.getElementById('expand-carrosel')
+let containerAll = document.getElementById('container-all')
+let imageBg = document.getElementsByClassName('selecao-imagens-4-midia-screenshots-010')
 
 function border() {
     div1.setAttribute('id', 'meuId');
@@ -155,32 +166,13 @@ divConsoles4.addEventListener('dblclick', borderOffConsole)
 divConsoles5.addEventListener('dblclick', borderOffConsole)
 divConsoles6.addEventListener('dblclick', borderOffConsole)
 
-function scrollMove() {
-    scrollTo(0, 615)
-}
-
-function reserveJaButton() {
+const reserveJaButton = function() {
     scrollTo(0, 2450)
 }
 
-scrollButton.addEventListener('click', scrollMove)
+scrollButton.addEventListener('click', () => scrollTo(0, 615));
 reserveJa.addEventListener('click', reserveJaButton)
 reserveJa1.addEventListener('click', reserveJaButton)
-
-var arrayImagens = ['imagens/LIS-Midia-04.png', 'imagens/LIS-Midia-01.png', 'imagens/LIS-Midia-02.png', 'imagens/LIS-Midia-03.png']
-var midiaScreenshots = document.getElementById('midia-screenshots')
-var containerSlide = document.getElementById('container-slide')
-var containerItems = document.getElementById('container-items')
-var previous = document.getElementById('previous')
-var next = document.getElementById('next')
-var primeiraImagem = document.getElementsByClassName('img-all')
-var expand = document.getElementsByClassName('svg-expand__script')
-var expandCarrosel = document.getElementById('expand-carrosel')
-var containerAll = document.getElementById('container-all')
-var imageBgZero = document.getElementById('selecao-imagens-4-midia-screenshots-011')
-var imageBgUm = document.getElementById('selecao-imagens-4-midia-screenshots-012')
-var imageBgDois = document.getElementById('selecao-imagens-4-midia-screenshots-013')
-var imageBgTres = document.getElementById('selecao-imagens-4-midia-screenshots-014')
 
 containerSlide.style.display = 'none'
 
@@ -190,49 +182,30 @@ function loop() {
     }
 }
 
-function zoomExpandZero() {
+function zoomExpand(valor) {
     midiaScreenshots.setAttribute('class', 'div-div-selecao-imagens-4-midia-screenshots-07211')
     containerSlide.style.display = 'flex'
     midiaScreenshots.style.display = 'none'
     containerAll.style.padding = '20px'
     loop()
+
+    for(let i = 1; i <= valor; i++) {
+        nextImage();
+    } 
 }
 
-function zoomExpandUm() {
-    arrayImagens = ['imagens/LIS-Midia-01.png', 'imagens/LIS-Midia-02.png', 'imagens/LIS-Midia-03.png', 'imagens/LIS-Midia-04.png']
-    zoomExpandZero()
+for(let i = 0; i < imageBg.length; i++) {
+    expand[i].addEventListener('click', () => zoomExpand(i))
+    imageBg[i].addEventListener('click', () => zoomExpand(i))
 }
 
-function zoomExpandDois() {
-    arrayImagens = ['imagens/LIS-Midia-02.png', 'imagens/LIS-Midia-03.png', 'imagens/LIS-Midia-04.png', 'imagens/LIS-Midia-01.png']
-    zoomExpandZero()
-}
+const nextImage = () => containerItems.appendChild(primeiraImagem[0]);
 
-function zoomExpandTres() {
-    arrayImagens = ['imagens/LIS-Midia-03.png', 'imagens/LIS-Midia-04.png', 'imagens/LIS-Midia-01.png', 'imagens/LIS-Midia-02.png']
-    zoomExpandZero()
-}
-
-expand[0].addEventListener('click', zoomExpandZero)
-expand[1].addEventListener('click', zoomExpandUm)
-expand[2].addEventListener('click', zoomExpandDois)
-expand[3].addEventListener('click', zoomExpandTres)
-imageBgZero.addEventListener('click', zoomExpandZero)
-imageBgUm.addEventListener('click', zoomExpandUm)
-imageBgDois.addEventListener('click', zoomExpandDois)
-imageBgTres.addEventListener('click', zoomExpandTres)
-
-function nextImage() {
-    containerItems.appendChild(primeiraImagem[0])
-}
-
-function previosImage() {
+next.addEventListener('click', nextImage);
+previous.addEventListener('click', () => {
     let itemsTamanho = primeiraImagem[primeiraImagem.length -1]
     containerItems.insertBefore(itemsTamanho, primeiraImagem[0])
-}
-
-next.addEventListener('click', nextImage)
-previous.addEventListener('click', previosImage)
+});
 
 function zoomExpandCarrosel() {
     containerSlide.style.position = 'fixed'
