@@ -18,51 +18,45 @@ let expand = document.getElementsByClassName('svg-expand__script')
 let expandCarrosel = document.getElementById('expand-carrosel')
 let containerAll = document.getElementById('container-all')
 let imageBg = document.getElementsByClassName('selecao-imagens-4-midia-screenshots-010')
+const closeSlide = document.getElementById('close')
 
 function border(valor) {
-    div[0].setAttribute('id', 'meuId');
-    div[1].removeAttribute('id', 'meuId');
-    div[2].removeAttribute('id', 'meuId');
-    showDiv.setAttribute('class', 'show__div-exposed')
-    divOculta.removeAttribute('id', 'Ocult')
-    linkButton()
+    for(let i = 0; i < div.length; i++) {
+        div[i].removeAttribute('id', 'meuId');
+    }
 
     switch(valor) {
-        case 1:
-            border()
-            div[1].setAttribute('id', 'meuId');
-            div[0].removeAttribute('id', 'meuId');
+        case 0:
+            div[0].setAttribute('id', 'meuId');
             divOculta.removeAttribute('id', 'Ocult')
-            linkButton()
+            break;
+        case 1:
+            div[1].setAttribute('id', 'meuId');
+            divOculta.removeAttribute('id', 'Ocult')
             break;
         case 2: 
-            if (div[0].id == 'meuId' || div[1].id == 'meuId') {
-                border()
-                div[2].setAttribute('id', 'meuId');
-                div[0].removeAttribute('id', 'meuId');
-                divOculta.setAttribute('id', 'Ocult')
-                linkButton()
-            } else {
-                border()
-                div[2].setAttribute('id', 'meuId');
-                div[0].removeAttribute('id', 'meuId');
-                divOculta.setAttribute('id', 'Ocult2')
-                linkButton()
-            }
+            div[2].setAttribute('id', 'meuId');
+            divOculta.setAttribute('id', 'Ocult')
             break;
     }
+
+    showDiv.setAttribute('class', 'show__div-exposed')
+
+    if(valor === -1) {
+        showDiv.removeAttribute('class', 'show__div-exposed')
+    }
+    
+    linkButton();
 }
 
-function borderOff() {
-    border()
-    div[0].removeAttribute('id', 'meuId');
-    showDiv.removeAttribute('class', 'show__div-exposed')
+function borderOff(offBorder) {
+    border(offBorder)
     borderOffConsole()
 }
 
 for(let i = 0; i < div.length; i++) {
     div[i].addEventListener('click', () => border(i))
-    div[i].addEventListener('dblclick', borderOff)
+    div[i].addEventListener('dblclick', () => borderOff(-1))
 }
 
 function linkButton() {
@@ -95,42 +89,37 @@ function linkButton() {
 }
 
 function borderDivConsoles(valor) {
-    divConsoles[0].setAttribute('id', 'meuId');
-
-    for(let i = 1; i < divConsoles.length; i++) {
+    for(let i = 0; i < divConsoles.length; i++) {
         divConsoles[i].removeAttribute('id', 'meuId');
     }
-
+    
     switch(valor) {
+        case 0: 
+            divConsoles[0].setAttribute('id', 'meuId');
+            break;
         case 1:
             divConsoles[1].setAttribute('id', 'meuId');
-            divConsoles[0].removeAttribute('id', 'meuId');
             break;
         case 2: 
             divConsoles[2].setAttribute('id', 'meuId');
-            divConsoles[0].removeAttribute('id', 'meuId');
             break;
         case 3:
             divConsoles[3].setAttribute('id', 'meuId');
-            divConsoles[0].removeAttribute('id', 'meuId');
             break;
         case 4:
             divConsoles[4].setAttribute('id', 'meuId');
-            divConsoles[0].removeAttribute('id', 'meuId');
             break;
         case 5:
             divConsoles[5].setAttribute('id', 'meuId');
-            divConsoles[0].removeAttribute('id', 'meuId');
             break;
     }
-
+    
     comprarGame.setAttribute('class', 'comprar__game');
     linkButton();
 }
 
 function borderOffConsole() {
     borderDivConsoles()
-    divConsoles[0].removeAttribute('id', 'meuId');
     comprarGame.removeAttribute('class', 'comprar__game')
 }
 
@@ -146,8 +135,6 @@ const reserveJaButton = function() {
 scrollButton.addEventListener('click', () => scrollTo(0, 615));
 reserveJa.addEventListener('click', reserveJaButton)
 reserveJa1.addEventListener('click', reserveJaButton)
-
-containerSlide.style.display = 'none'
 
 function loopArray() {
     for(let i = 0; i <= arrayImagens.length -1; i++) {
@@ -180,6 +167,9 @@ previous.addEventListener('click', () => {
     containerItems.insertBefore(itemsTamanho, primeiraImagem[0])
 });
 
+containerSlide.style.display = 'none';
+expandCarrosel.style.marginRight = '50px'
+
 fullScreenCarrossel();
 function fullScreenCarrossel() {
     expandCarrosel.addEventListener('click', () => {
@@ -193,13 +183,21 @@ function fullScreenCarrossel() {
         containerSlide.style.backgroundColor = 'white';
         document.body.style.overflowY = 'hidden';
         expandCarrosel.setAttribute('src', 'SVG/compress.svg');
-        expandCarrosel.style.marginRight = '50px'
-        expandCarrosel.addEventListener('click', () => {
-            containerSlide.setAttribute('style', '');
-            expandCarrosel.setAttribute('src', 'SVG/expand.svg');
-            document.body.style.overflowY = 'scroll';
-            expandCarrosel.style.marginRight = '0px'
-            fullScreenCarrossel();
-        })
+        expandCarrosel.addEventListener('click', () => closeCarrossel(false))
     })
+}
+
+closeSlide.addEventListener('click', closeCarrossel);
+
+function closeCarrossel(closeSeparador = true) {
+    containerSlide.setAttribute('style', '');
+    expandCarrosel.setAttribute('src', 'SVG/expand.svg');
+    document.body.style.overflowY = 'scroll';
+    fullScreenCarrossel();
+
+    if(closeSeparador) {
+        containerSlide.style.display = 'none'
+        midiaScreenshots.style.display = 'inline-flex'
+        containerAll.style.padding = '0px'
+    }
 }

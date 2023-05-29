@@ -626,10 +626,29 @@ header {
     position: relative;
 }
 
+.close {
+    display: inline-flex;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    transition: 0.4s transform ease-in-out, 0.5s opacity ease-out;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
 .div-cobrindo-imagens-4-all-033:hover .svg-expand {
     display: inline-flex;
     transform: translateY(-70px);
     opacity: 1;
+}
+
+#expand-carrosel {
+    margin-right: 50px;
 }
 
 .svg-expand {
@@ -640,7 +659,7 @@ header {
     cursor: pointer;
     transition: 0.4s transform ease-in-out, 0.5s opacity ease-out;
     opacity: 0;
-
+    margin-right: 50px;
 }
 
 .selecao-imagens-4-midia-screenshots-010{
