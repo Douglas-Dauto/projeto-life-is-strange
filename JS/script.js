@@ -1,5 +1,5 @@
-let div1 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[0], div2 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[1], div3 = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')[2]
-let divConsoles1 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[0], divConsoles2 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[1], divConsoles3 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[2], divConsoles4 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[3], divConsoles5 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[4], divConsoles6 = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')[5]
+let div = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')
+let divConsoles = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')
 let showDiv = document.getElementById('show-div')
 let scrollButton = document.getElementsByClassName('div-conjunto-2-div-seta-explore-juntos-072')[0]
 let reserveJa = document.getElementsByClassName('div-button-reserve-ja-collection-true-remastered-012')[0]
@@ -19,86 +19,74 @@ let expandCarrosel = document.getElementById('expand-carrosel')
 let containerAll = document.getElementById('container-all')
 let imageBg = document.getElementsByClassName('selecao-imagens-4-midia-screenshots-010')
 
-function border() {
-    div1.setAttribute('id', 'meuId');
-    div2.removeAttribute('id', 'meuId');
-    div3.removeAttribute('id', 'meuId');
+function border(valor) {
+    div[0].setAttribute('id', 'meuId');
+    div[1].removeAttribute('id', 'meuId');
+    div[2].removeAttribute('id', 'meuId');
     showDiv.setAttribute('class', 'show__div-exposed')
     divOculta.removeAttribute('id', 'Ocult')
     linkButton()
-}
 
-function border1() {
-    border()
-    div2.setAttribute('id', 'meuId');
-    div1.removeAttribute('id', 'meuId');
-    divOculta.removeAttribute('id', 'Ocult')
-    linkButton()
-}
-
-function border2() {
-    if (div1.id == 'meuId' || div2.id == 'meuId') {
-        border()
-        div3.setAttribute('id', 'meuId');
-        div1.removeAttribute('id', 'meuId');
-        divOculta.setAttribute('id', 'Ocult')
-        linkButton()
-    } else {
-        border()
-        div3.setAttribute('id', 'meuId');
-        div1.removeAttribute('id', 'meuId');
-        divOculta.setAttribute('id', 'Ocult2')
-        linkButton()
+    switch(valor) {
+        case 1:
+            border()
+            div[1].setAttribute('id', 'meuId');
+            div[0].removeAttribute('id', 'meuId');
+            divOculta.removeAttribute('id', 'Ocult')
+            linkButton()
+            break;
+        case 2: 
+            if (div[0].id == 'meuId' || div[1].id == 'meuId') {
+                border()
+                div[2].setAttribute('id', 'meuId');
+                div[0].removeAttribute('id', 'meuId');
+                divOculta.setAttribute('id', 'Ocult')
+                linkButton()
+            } else {
+                border()
+                div[2].setAttribute('id', 'meuId');
+                div[0].removeAttribute('id', 'meuId');
+                divOculta.setAttribute('id', 'Ocult2')
+                linkButton()
+            }
+            break;
     }
 }
 
 function borderOff() {
     border()
-    div1.removeAttribute('id', 'meuId');
+    div[0].removeAttribute('id', 'meuId');
     showDiv.removeAttribute('class', 'show__div-exposed')
     borderOffConsole()
 }
 
-div1.addEventListener('click', border)
-div2.addEventListener('click', border1)
-div3.addEventListener('click', border2)
-
-div1.addEventListener('dblclick', borderOff)
-div2.addEventListener('dblclick', borderOff)
-div3.addEventListener('dblclick', borderOff)
-
-function borderDivConsoles0() {
-    divConsoles1.setAttribute('id', 'meuId');
-    divConsoles2.removeAttribute('id', 'meuId');
-    divConsoles3.removeAttribute('id', 'meuId');
-    divConsoles4.removeAttribute('id', 'meuId');
-    divConsoles5.removeAttribute('id', 'meuId');
-    divConsoles6.removeAttribute('id', 'meuId');
-    comprarGame.setAttribute('class', 'comprar__game');
+for(let i = 0; i < div.length; i++) {
+    div[i].addEventListener('click', () => border(i))
+    div[i].addEventListener('dblclick', borderOff)
 }
 
 function linkButton() {
-    if (div1.id == 'meuId' && divConsoles1.id == 'meuId' || div1.id == 'meuId' && divConsoles2.id == 'meuId') {
+    if (div[0].id == 'meuId' && divConsoles[0].id == 'meuId' || div[0].id == 'meuId' && divConsoles[1].id == 'meuId') {
         comprarGame.href = 'https://store.playstation.com/pt-br/product/UP0082-PPSA02046_00-1336949547454056'
-    } else if (div1.id == 'meuId' && divConsoles3.id == 'meuId' || div1.id == 'meuId' && divConsoles4.id == 'meuId') {
+    } else if (div[0].id == 'meuId' && divConsoles[2].id == 'meuId' || div[0].id == 'meuId' && divConsoles[3].id == 'meuId') {
         comprarGame.href = 'https://www.xbox.com/pt-BR/games/store/life-is-strange-true-colors/9NFWSNN4JWKB'
-    } else if (div1.id == 'meuId' && divConsoles5.id == 'meuId') {
+    } else if (div[0].id == 'meuId' && divConsoles[4].id == 'meuId') {
         comprarGame.href = 'https://store.steampowered.com/app/936790/Life_is_Strange_True_Colors/'
-    } else if (div1.id == 'meuId' && divConsoles6.id == 'meuId') {
+    } else if (div[0].id == 'meuId' && divConsoles[5].id == 'meuId') {
         comprarGame.href = 'https://stadia.google.com/game/life-is-strange-true-colors-pre-order'
-    } else if (div2.id == 'meuId' && divConsoles1.id == 'meuId' || div2.id == 'meuId' && divConsoles2.id == 'meuId') {
+    } else if (div[1].id == 'meuId' && divConsoles[0].id == 'meuId' || div[1].id == 'meuId' && divConsoles[1].id == 'meuId') {
         comprarGame.href = 'https://store.playstation.com/pt-br/product/UP0082-CUSA23980_00-1951785847228082'
-    } else if (div2.id == 'meuId' && divConsoles3.id == 'meuId' || div2.id == 'meuId' && divConsoles4.id == 'meuId') {
+    } else if (div[1].id == 'meuId' && divConsoles[2].id == 'meuId' || div[1].id == 'meuId' && divConsoles[3].id == 'meuId') {
         comprarGame.href = 'https://www.xbox.com/en-US/games/store/life-is-strange-remastered/9MVRDVNCKTRJ'
-    } else if (div2.id == 'meuId' && divConsoles5.id == 'meuId') {
+    } else if (div[1].id == 'meuId' && divConsoles[4].id == 'meuId') {
         comprarGame.href = 'https://store.steampowered.com/app/1265920/Life_is_Strange_Remastered/'
-    } else if (div2.id == 'meuId' && divConsoles6.id == 'meuId') {
+    } else if (div[1].id == 'meuId' && divConsoles[5].id == 'meuId') {
         comprarGame.href = 'https://stadia.google.com/game/life-is-strange-remastered'
-    } else if (div3.id == 'meuId' && divConsoles1.id == 'meuId' || div3.id == 'meuId' && divConsoles2.id == 'meuId') {
+    } else if (div[2].id == 'meuId' && divConsoles[0].id == 'meuId' || div[2].id == 'meuId' && divConsoles[1].id == 'meuId') {
         comprarGame.href = 'https://store.playstation.com/pt-br/product/UP0082-CUSA08283_00-PROM0000COMPLLAT'
-    } else if (div3.id == 'meuId' && divConsoles3.id == 'meuId' || div3.id == 'meuId' && divConsoles4.id == 'meuId') {
+    } else if (div[2].id == 'meuId' && divConsoles[2].id == 'meuId' || div[2].id == 'meuId' && divConsoles[3].id == 'meuId') {
         comprarGame.href = 'https://www.xbox.com/pt-BR/games/store/life-is-strange-2-temporada-completa/BSW8GKBVB5W8'
-    } else if (div3.id == 'meuId' && divConsoles5.id == 'meuId') {
+    } else if (div[2].id == 'meuId' && divConsoles[4].id == 'meuId') {
         comprarGame.href = 'https://store.steampowered.com/app/532210/Life_is_Strange_2/'
     } else {
         comprarGame.href = '#'
@@ -106,65 +94,50 @@ function linkButton() {
     }
 }
 
-function borderDivConsoles() {
-    borderDivConsoles0()
-    linkButton()
-}
+function borderDivConsoles(valor) {
+    divConsoles[0].setAttribute('id', 'meuId');
 
-function borderDivConsoles1() {
-    borderDivConsoles0()
-    divConsoles2.setAttribute('id', 'meuId');
-    divConsoles1.removeAttribute('id', 'meuId');
-    linkButton()
-}
+    for(let i = 1; i < divConsoles.length; i++) {
+        divConsoles[i].removeAttribute('id', 'meuId');
+    }
 
-function borderDivConsoles2() {
-    borderDivConsoles0()
-    divConsoles3.setAttribute('id', 'meuId');
-    divConsoles1.removeAttribute('id', 'meuId');
-    linkButton()
-}
+    switch(valor) {
+        case 1:
+            divConsoles[1].setAttribute('id', 'meuId');
+            divConsoles[0].removeAttribute('id', 'meuId');
+            break;
+        case 2: 
+            divConsoles[2].setAttribute('id', 'meuId');
+            divConsoles[0].removeAttribute('id', 'meuId');
+            break;
+        case 3:
+            divConsoles[3].setAttribute('id', 'meuId');
+            divConsoles[0].removeAttribute('id', 'meuId');
+            break;
+        case 4:
+            divConsoles[4].setAttribute('id', 'meuId');
+            divConsoles[0].removeAttribute('id', 'meuId');
+            break;
+        case 5:
+            divConsoles[5].setAttribute('id', 'meuId');
+            divConsoles[0].removeAttribute('id', 'meuId');
+            break;
+    }
 
-function borderDivConsoles3() {
-    borderDivConsoles0()
-    divConsoles4.setAttribute('id', 'meuId');
-    divConsoles1.removeAttribute('id', 'meuId');
-    linkButton()
-}
-
-function borderDivConsoles4() {
-    borderDivConsoles0()
-    divConsoles5.setAttribute('id', 'meuId');
-    divConsoles1.removeAttribute('id', 'meuId');
-    linkButton()
-}
-
-function borderDivConsoles5() {
-    borderDivConsoles0()
-    divConsoles6.setAttribute('id', 'meuId');
-    divConsoles1.removeAttribute('id', 'meuId');
-    linkButton()
+    comprarGame.setAttribute('class', 'comprar__game');
+    linkButton();
 }
 
 function borderOffConsole() {
-    borderDivConsoles0()
-    divConsoles1.removeAttribute('id', 'meuId');
+    borderDivConsoles()
+    divConsoles[0].removeAttribute('id', 'meuId');
     comprarGame.removeAttribute('class', 'comprar__game')
 }
 
-divConsoles1.addEventListener('click', borderDivConsoles)
-divConsoles2.addEventListener('click', borderDivConsoles1)
-divConsoles3.addEventListener('click', borderDivConsoles2)
-divConsoles4.addEventListener('click', borderDivConsoles3)
-divConsoles5.addEventListener('click', borderDivConsoles4)
-divConsoles6.addEventListener('click', borderDivConsoles5)
-
-divConsoles1.addEventListener('dblclick', borderOffConsole)
-divConsoles2.addEventListener('dblclick', borderOffConsole)
-divConsoles3.addEventListener('dblclick', borderOffConsole)
-divConsoles4.addEventListener('dblclick', borderOffConsole)
-divConsoles5.addEventListener('dblclick', borderOffConsole)
-divConsoles6.addEventListener('dblclick', borderOffConsole)
+for(let i = 0; i < divConsoles.length; i++) {
+    divConsoles[i].addEventListener('dblclick', borderOffConsole);
+    divConsoles[i].addEventListener('click', () => borderDivConsoles(i));
+}
 
 const reserveJaButton = function() {
     scrollTo(0, 2450)
@@ -176,7 +149,7 @@ reserveJa1.addEventListener('click', reserveJaButton)
 
 containerSlide.style.display = 'none'
 
-function loop() {
+function loopArray() {
     for(let i = 0; i <= arrayImagens.length -1; i++) {
         containerItems.innerHTML += `<img class="img-all" src="${arrayImagens[i]}" alt=""></img>`
     }
@@ -187,7 +160,7 @@ function zoomExpand(valor) {
     containerSlide.style.display = 'flex'
     midiaScreenshots.style.display = 'none'
     containerAll.style.padding = '20px'
-    loop()
+    loopArray()
 
     for(let i = 1; i <= valor; i++) {
         nextImage();
@@ -207,14 +180,26 @@ previous.addEventListener('click', () => {
     containerItems.insertBefore(itemsTamanho, primeiraImagem[0])
 });
 
-function zoomExpandCarrosel() {
-    containerSlide.style.position = 'fixed'
-    containerSlide.style.left = 'center'
-    containerSlide.style.top = '0'
-    containerSlide.style.zIndex = '1000'
-    containerSlide.style.width = '100vw'
-    containerSlide.style.height = '100vh'
-    containerSlide.style.backgroundColor = 'white'
+fullScreenCarrossel();
+function fullScreenCarrossel() {
+    expandCarrosel.addEventListener('click', () => {
+        containerSlide.style.position = 'fixed';
+        containerSlide.style.left = 'center';
+        containerSlide.style.top = '50%';
+        containerSlide.style.translate = '0 -50%';
+        containerSlide.style.zIndex = '1000';
+        containerSlide.style.width = '95vw';
+        containerSlide.style.height = '95vh';
+        containerSlide.style.backgroundColor = 'white';
+        document.body.style.overflowY = 'hidden';
+        expandCarrosel.setAttribute('src', 'SVG/compress.svg');
+        expandCarrosel.style.marginRight = '50px'
+        expandCarrosel.addEventListener('click', () => {
+            containerSlide.setAttribute('style', '');
+            expandCarrosel.setAttribute('src', 'SVG/expand.svg');
+            document.body.style.overflowY = 'scroll';
+            expandCarrosel.style.marginRight = '0px'
+            fullScreenCarrossel();
+        })
+    })
 }
-
-expandCarrosel.addEventListener('click', zoomExpandCarrosel)
