@@ -1923,8 +1923,12 @@ header {
         justify-content: flex-end;
     }
 
-    .LIS-ul-li-header input:focus + .div-logo-lista-conjunto-087 {
+    #div-logo-lista-conjunto-087--return {
         right: 0;
+    }
+
+    .menu-opcoes-3-riscos-092 {
+        cursor: pointer;
     }
 
     .itens-lista-header-LIS-004 {

@@ -18,7 +18,10 @@ let expand = document.getElementsByClassName('svg-expand__script')
 let expandCarrosel = document.getElementById('expand-carrosel')
 let containerAll = document.getElementById('container-all')
 let imageBg = document.getElementsByClassName('selecao-imagens-4-midia-screenshots-010')
-const closeSlide = document.getElementById('close')
+const closeSlide = document.getElementById('close');
+const buttonMenuMobile = document.getElementsByClassName('menu-opcoes-3-riscos-092')[0];
+const menuMobile = document.getElementsByClassName('div-logo-lista-conjunto-087')[0];
+const divPartMenuMobile = document.getElementsByClassName('img-div-max-011')[0];
 
 function border(valor) {
     for(let i = 0; i < div.length; i++) {
@@ -93,27 +96,7 @@ function borderDivConsoles(valor) {
         divConsoles[i].removeAttribute('id', 'meuId');
     }
     
-    switch(valor) {
-        case 0: 
-            divConsoles[0].setAttribute('id', 'meuId');
-            break;
-        case 1:
-            divConsoles[1].setAttribute('id', 'meuId');
-            break;
-        case 2: 
-            divConsoles[2].setAttribute('id', 'meuId');
-            break;
-        case 3:
-            divConsoles[3].setAttribute('id', 'meuId');
-            break;
-        case 4:
-            divConsoles[4].setAttribute('id', 'meuId');
-            break;
-        case 5:
-            divConsoles[5].setAttribute('id', 'meuId');
-            break;
-    }
-    
+    divConsoles[valor].setAttribute('id', 'meuId');
     comprarGame.setAttribute('class', 'comprar__game');
     linkButton();
 }
@@ -200,4 +183,23 @@ function closeCarrossel(closeSeparador = true) {
         midiaScreenshots.style.display = 'inline-flex'
         containerAll.style.padding = '0px'
     }
+}
+
+abrirFecharMenuMobile(true);
+function abrirFecharMenuMobile(valor) {
+    if(valor) {
+        buttonMenuMobile.addEventListener('click', () => {
+            menuMobile.setAttribute('id', 'div-logo-lista-conjunto-087--return');
+            abrirFecharMenuMobile(false);
+        });
+    } else {
+        buttonMenuMobile.addEventListener('click', removerMenu);
+        divPartMenuMobile.addEventListener('click', removerMenu);
+        menuMobile.addEventListener('click', removerMenu);
+    }
+}
+
+function removerMenu() {
+    menuMobile.removeAttribute('id', 'div-logo-lista-conjunto-087--return');
+    abrirFecharMenuMobile(true);
 }
