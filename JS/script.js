@@ -21,7 +21,7 @@ let imageBg = document.getElementsByClassName('selecao-imagens-4-midia-screensho
 const closeSlide = document.getElementById('close');
 const buttonMenuMobile = document.getElementsByClassName('menu-opcoes-3-riscos-092')[0];
 const menuMobile = document.getElementsByClassName('div-logo-lista-conjunto-087')[0];
-const divPartMenuMobile = document.getElementsByClassName('img-div-max-011')[0];
+const divPartMenuMobile = document.getElementsByClassName('div-part-menu-mobile');
 
 function border(valor) {
     for(let i = 0; i < div.length; i++) {
@@ -194,12 +194,17 @@ function abrirFecharMenuMobile(valor) {
         });
     } else {
         buttonMenuMobile.addEventListener('click', removerMenu);
-        divPartMenuMobile.addEventListener('click', removerMenu);
         menuMobile.addEventListener('click', removerMenu);
+        document.body.style.overflowY = 'hidden';
+
+        for(let i = 0; i < divPartMenuMobile.length; i++) {
+            divPartMenuMobile[i].addEventListener('click', removerMenu);
+        }
     }
 }
 
 function removerMenu() {
     menuMobile.removeAttribute('id', 'div-logo-lista-conjunto-087--return');
     abrirFecharMenuMobile(true);
+    document.body.style.overflowY = 'scroll';
 }
