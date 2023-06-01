@@ -22,6 +22,8 @@ const closeSlide = document.getElementById('close');
 const buttonMenuMobile = document.getElementsByClassName('menu-opcoes-3-riscos-092')[0];
 const menuMobile = document.getElementsByClassName('div-logo-lista-conjunto-087')[0];
 const divPartMenuMobile = document.getElementsByClassName('div-part-menu-mobile');
+const textMaxEChloe = document.getElementsByClassName('max-e-chloe-div-retornar-arcadia-bay-001')[0];
+const textReturnArcadiaBay = document.getElementsByClassName('return-bay-div-farol-bay-002')[0];
 
 function border(valor) {
     for(let i = 0; i < div.length; i++) {
@@ -207,4 +209,26 @@ function removerMenu() {
     menuMobile.removeAttribute('id', 'div-logo-lista-conjunto-087--return');
     abrirFecharMenuMobile(true);
     document.body.style.overflowY = 'scroll';
+}
+
+scrollText();
+function scrollText(translateValue = 60) {
+    textMaxEChloe.style.transform = `translateX(-${translateValue}vw)`;
+    textReturnArcadiaBay.style.transform = `translateX(${translateValue}vw)`;
+
+    document.addEventListener('scroll', () => {
+        if(window.scrollY === 0) {
+            translateValue = 60;
+            textMaxEChloe.style.transform = `translateX(-${translateValue}vw)`;
+            textReturnArcadiaBay.style.transform = `translateX(${translateValue}vw)`;
+        }
+
+        if(translateValue <= 0) {
+            return
+        }
+
+        translateValue -= 1.7;
+        textMaxEChloe.style.transform = `translateX(-${translateValue}vw)`;
+        textReturnArcadiaBay.style.transform = `translateX(${translateValue}vw)`;
+    })
 }
