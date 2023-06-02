@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    scroll-behavior: smooth;
+}
+
+.body-LIS {
+    background-color: #fff;
+    background: url(imagens/BG-02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(100, 49, 49);
+    }
+}
+
+header {
+    z-index: 10 !important;
+
+    .header-cima-desenvolvedora-icones-002{
+        background-color: rgb(13, 13, 13);
+        position: fixed;
+        width: 100%;
+        padding: 6px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        box-sizing: border-box;
+        height: 40px;
+        z-index: 10;
+
+        .logo-dontnod-header-cima-032{
+            align-items: center;
+        }
+
+        .div-header-cima-right-005{
+            display: flex;
+            flex-direction: row;
+
+            .lista-cima-header-003{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .link-lista-cima-header-003{
+                    text-decoration: none;
+
+                    .li-header-cima-078{
+                        vertical-align: middle;
+                        margin-right: 38px;
+                        color: rgba(255, 255, 255, 0.6);
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 1em;
+                        cursor: pointer;
+                        transition: 0.3s; /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+                        transition-property: color;
+
+                        &:hover{
+                            color: rgb(204, 204, 204);
+                        }
+                    }
+                }
+            }
+
+            .img1-2-icone-cima-header-009{
+                align-items: center;
+                cursor: pointer;
+                transition: 0.3s filter;
+
+                &:hover{
+                    filter: brightness(1.5);
+                }
+            }
+        }
+    }
+
+    .div-img-max-001 {
+        .LIS-ul-li-header {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            background-color: rgb(0,0,0,0.75);
+            padding: 15px 10px 10px 20px;
+            align-items: center;
+            position: fixed;
+            right: 0px;
+            top: 39.5px;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-between;
+            z-index: 10;
+
+            .div-logo-lista-conjunto-087 {
+                .logo-header-div-002 {
+                    .img1-lis-header-logo {
+                        width: 160px;
+                        height: 42px;
+                        padding: 5px;
+                        background-color: white;
+                        border-radius: 10px;
+                        transition-timing-function: ease;
+                        transition-duration: 1s; /* Essa duração afeta o transition-timing-function */
+                        transition: 0.3s transform, 0s background-color; /*Background-color esta ai só de exemplo*//* Lembre de colocar a tag que vc quer aplicar o transition para ele não se aplicar em todo o conteúdo*/ /* Para adicionar mais de uma propriedade no transition é só da a virgula e dar o segundo em cada um deles*/
+                        box-sizing: border-box;
+
+                        &:hover{
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+
+                .itens-lista-header-LIS-004 {
+                    display: flex;
+                    position: relative;
+                    left: 63px;
+                    align-items: center;
+                }
+            }
+
+            .menu-opcoes-3-riscos-092 { 
+                display: none; 
+            }
+        }
+    }
+}
+
+#show-div {
+    #comprar-game {
+        background-color: gray;
+        display: inline-block;
+        padding: 8px 35px;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 18px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: default;
+        pointer-events: none;
+        box-shadow: 1px 1px 3px #0d0d0d27;
+    }
+}

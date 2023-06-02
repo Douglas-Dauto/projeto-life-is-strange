@@ -54,7 +54,6 @@ header {
 }
 .logo-dontnod-header-cima-032{
     align-items: center;
-
 }
 .div-header-cima-right-005{
     display: flex;
@@ -65,11 +64,9 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .link-lista-cima-header-003{
     text-decoration: none;
-
 }
 .li-header-cima-078{
     vertical-align: middle;
@@ -92,7 +89,6 @@ header {
 }
 .img1-2-icone-cima-header-009:hover{
     filter: brightness(1.5);
-
 }
 .img1-lis-header-logo{
     width: 160px;
@@ -107,7 +103,6 @@ header {
 }
 .img1-lis-header-logo:hover{
     transform: scale(1.03);
-
 }
 .itens-lista-header-LIS-004{
     display: flex;
@@ -148,7 +143,7 @@ header {
     cursor: default;
     pointer-events: none;
     box-shadow: 1px 1px 3px #0d0d0d27;
-}
+} /* -----------------------------------------------------------------Parei aqui---------------------------------------- */
 
 .comprar__game {
     background-color: #f9e33d !important;
