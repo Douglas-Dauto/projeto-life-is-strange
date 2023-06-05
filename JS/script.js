@@ -226,8 +226,13 @@ function scrollText(translateValue = 60) {
         if(translateValue <= 0) {
             return
         }
+    
+        if(window.innerWidth <= 959) {
+            translateValue -= 3;
+        } else {
+            translateValue -= 2.5;
+        }
 
-        translateValue -= 1.7;
         textMaxEChloe.style.transform = `translateX(-${translateValue}vw)`;
         textReturnArcadiaBay.style.transform = `translateX(${translateValue}vw)`;
     })
