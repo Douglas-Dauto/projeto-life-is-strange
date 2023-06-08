@@ -122,21 +122,23 @@ reserveJa.addEventListener('click', reserveJaButton)
 reserveJa1.addEventListener('click', reserveJaButton)
 
 function loopArray() {
+    containerItems.innerHTML = ''; 
+
     for(let i = 0; i <= arrayImagens.length -1; i++) {
         containerItems.innerHTML += `<img class="img-all" src="${arrayImagens[i]}" alt=""></img>`
     }
 }
 
 function zoomExpand(valor) {
-    midiaScreenshots.setAttribute('class', 'div-div-selecao-imagens-4-midia-screenshots-07211')
-    containerSlide.style.display = 'flex'
-    midiaScreenshots.style.display = 'none'
-    containerAll.style.padding = '20px'
-    loopArray()
+    midiaScreenshots.setAttribute('class', 'div-div-selecao-imagens-4-midia-screenshots-07211');
+    containerSlide.style.display = 'flex';
+    midiaScreenshots.style.display = 'none';
+    containerAll.style.padding = '20px';
+    loopArray();
 
     for(let i = 1; i <= valor; i++) {
         nextImage();
-    } 
+    }
 }
 
 for(let i = 0; i < imageBg.length; i++) {
