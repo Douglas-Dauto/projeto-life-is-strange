@@ -514,7 +514,8 @@ header {
 .h3-return-bay-050{
     font-size: 36px;
     text-align: end;
-    color: rgba(0, 0, 0, 0.87)
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: uppercase;
 }
 
 .div-info-return-bay-iluminada-099{
@@ -1100,6 +1101,10 @@ header {
     font-family: interstate, sans-serif;
     font-weight: 300;
     line-height: 1.43;
+}
+
+.lista-footer-029::first-letter{
+    text-transform: uppercase;
 }
 
 .topo-scroll {

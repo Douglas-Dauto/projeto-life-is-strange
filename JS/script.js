@@ -239,3 +239,58 @@ function scrollText(translateValue = 60) {
         textReturnArcadiaBay.style.transform = `translateX(${translateValue}vw)`;
     })
 }
+
+const idiomaSelecao = document.querySelectorAll('.select-idioma-footer-008');
+const idiomas = ['portugues', 'espanol', 'deutsch', 'italianoIT', 'françaisFR', 'englishNL', 'englishUK', 'englishUS'];
+
+setInterval(() => mudarIdioma(), 1000);
+let controleValueUm = false;
+
+function mudarIdioma() {
+    const menuItems = document.getElementsByClassName('item-li-cabecalho');
+    let arrayMenuItems = [];
+    const headerMenuItems = document.getElementsByClassName('li-header-cima-078');
+    let arrayHeaderMenuItems = [];
+    const buttonAssistaTrailer = document.getElementsByClassName('button-assita-trailer-p-017')[0];
+    const exploreButton = document.getElementsByClassName('explore-p-ex-037')[0];
+    const informativo = document.getElementsByClassName('informativo-div-020')[0];
+    const reserveJaText = document.querySelector('.div-button-reserve-ja-collection-true-remastered-012>p');
+    const textMaxECholeES = document.getElementsByClassName('info-max-e-chloe-jogos-premiados-007')[0];
+    const titleRetorneArcadiaBay = document.getElementsByClassName('h3-return-bay-050')[0];
+    const textReturnArcadiaBayES = document.getElementsByClassName('info-return-bay-cidadezinha-019')[0];
+    const midiaText = document.getElementsByClassName('item-midia-sozinha-midia-070')[0];
+    const screenshotsText = document.getElementsByClassName('name-item-screenshot-video-2-032')[0];
+    const videosText = document.getElementsByClassName('name-item-screenshot-video-2-032')[1];
+    const reserveJaTextDown = document.getElementsByClassName('reserve-ja-3-text-030')[0];
+    const mudarRegiaoText = document.getElementsByClassName('mudar-regiao-3-item-text-303')[0];
+    const escolherJogoText = document.getElementsByClassName('selecione-jogo-text-item-3-050')[0];
+    const escolherPlataforma = document.getElementsByClassName('text-selecionar-plataforma-sua-item-title-551')[0];
+    const footerParagrafo = document.getElementsByClassName('footer-paragrafo-001')[0];
+    const footerItemsText = document.getElementsByClassName('lista-footer-029');
+    let arrayfooterItemsText = [];
+
+    if(idiomaSelecao[0].value === '1' && controleValueUm) {
+        document.location.reload();
+        controleValueUm = false;
+        
+    } else if(idiomaSelecao[0].value === '2') {
+        arrayMenuItems = ['arte', 'juego', 'comunidad', 'blog', 'bienes'];
+        arrayHeaderMenuItems = ['juegos destacados', 'noticias', 'loja', 'soporte'];
+        arrayfooterItemsText = ['aviso de cookies', 'terminos de uso', 'aviso de privacidad', 'centro de apoyo', 'política de uso de materiales', 'declaración de afiliado'];
+        [buttonAssistaTrailer.innerHTML, exploreButton.innerHTML, informativo.innerHTML, reserveJaText.innerHTML, textMaxECholeES.innerHTML, titleRetorneArcadiaBay.innerHTML, textReturnArcadiaBayES.innerHTML, midiaText.innerHTML, screenshotsText.innerHTML, videosText.innerHTML, reserveJaTextDown.innerHTML, mudarRegiaoText.innerHTML, escolherJogoText.innerHTML, escolherPlataforma.innerHTML, comprarGame.innerHTML, footerParagrafo.innerHTML] = ['ver el trailer', 'explorar', 'informativo', 'reservar ahora', "¡Regresa a Arcadia Bay y experimenta dos juegos galardonados de Life is Strange como nunca antes! Las imágenes y la animación remasterizadas dan nueva vida a un gran elenco de personajes e historias emocionantes. La colección Life is Strange Remastered incluye 'Life is Strange Remastered' y 'Life is Strange: Before the Storm Remastered'.", 'volver a la bahía de Arcadia', "Iluminado por su emblemático faro, este pequeño pueblo de la costa de Oregón tiene una historia llena de misterios: la desaparición de Rachel Amber, la corrupción del gobierno, secretos familiares, un enorme incendio forestal y una tormenta sobrenatural. Como Max y Chloe, tus elecciones darán forma al pasado, presente y futuro de Arcadia Bay.", 'medios de comunicación', 'capturas de pantalla', 'vídeos', 'reservar ahora', 'cambia región', 'selecciona tu juego', 'selecciona tu plataforma', 'compra', 'LA VIDA ES EXTRAÑA © 2015, 2021 Square Enix Limited. LA VIDA ES EXTRAÑA: ANTES DE LA TORMENTA © 2017, 2021 Square Enix Limited. LIFE IS STRANGE: ANTES DE LA TORMENTA LIFE IS STRANGE, LIFE IS STRANGE: ANTES DE LA TORMENTA, LIFE IS STRANGE 2, LIFE IS STRANGE: TRUE COLORS, SQUARE ENIX y el logotipo de SQUARE ENIX son marcas registradas o marcas comerciales del grupo de empresas Square Enix . Nintendo Switch es una marca comercial de Nintendo. DECK NINE y DECK NINE GAMES son marcas registradas de Idol Minds, LLC. DONTNOD y DONTNOD Entertainment son marcas registradas de DONTNOD Entertainment, S.A. Todas las demás marcas comerciales son propiedad de sus respectivos dueños.'];
+
+        for(let i in menuItems) {
+            menuItems[i].innerHTML = arrayMenuItems[i];
+        }
+
+        for(let i in headerMenuItems) {
+            headerMenuItems[i].innerHTML = arrayHeaderMenuItems[i];
+        }
+
+        for(let i in footerItemsText) {
+            footerItemsText[i].innerHTML = arrayfooterItemsText[i];
+        }
+        
+        controleValueUm = true;
+    }
+}
