@@ -279,16 +279,77 @@ function mudarIdioma() {
     const footerParagrafo = document.getElementsByClassName('footer-paragrafo-001')[0];
     const footerItemsText = document.getElementsByClassName('lista-footer-029');
     let arrayfooterItemsText = [];
+    let arrayMenuItemsValueUm, arrayMenuItemsValueDois, arrayMenuItemsValueTres, arrayMenuItemsValueQuatro, arrayMenuItemsValueCinco;
+    let arrayHeaderMenuItemsValueUm, arrayHeaderMenuItemsValueDois, arrayHeaderMenuItemsValueTres, arrayHeaderMenuItemsValueQuatro;
+    let arrayfooterItemsTextValueUm, arrayfooterItemsTextValueDois, arrayfooterItemsTextValueTres, arrayfooterItemsTextValueQuatro, arrayfooterItemsTextValueCinco, arrayfooterItemsTextValueSeis;
+    let buttonAssistaTrailerValue, exploreButtonValue, informativoValue, reserveJaTextValue, textMaxECholeValue, titleRetorneArcadiaBayValue, textReturnArcadiaBayValue, midiaTextValue, screenshotsTextValue, videosTextValue, reserveJaTextDownValue, mudarRegiaoTextValue, escolherJogoTextValue, escolherPlataformaValue, comprarGameValue, footerParagrafoValue;
+
+
+    function traduzirArrayMenuItems(arrayMenuItemsValueUmPmtr, arrayMenuItemsValueDoisPmtr, arrayMenuItemsValueTresPmtr, arrayMenuItemsValueQuatroPmtr, arrayMenuItemsValueCincoPmtr) {
+        arrayMenuItemsValueUm = arrayMenuItemsValueUmPmtr;
+        arrayMenuItemsValueDois = arrayMenuItemsValueDoisPmtr;
+        arrayMenuItemsValueTres = arrayMenuItemsValueTresPmtr;
+        arrayMenuItemsValueQuatro = arrayMenuItemsValueQuatroPmtr;
+        arrayMenuItemsValueCinco = arrayMenuItemsValueCincoPmtr;
+    }
+
+    function traduzirArrayHeaderMenuItems(arrayHeaderMenuItemsValueUmPmtr, arrayHeaderMenuItemsValueDoisPmtr, arrayHeaderMenuItemsValueTresPmtr, arrayHeaderMenuItemsValueQuatroPmtr) {
+        arrayHeaderMenuItemsValueUm = arrayHeaderMenuItemsValueUmPmtr;
+        arrayHeaderMenuItemsValueDois = arrayHeaderMenuItemsValueDoisPmtr;
+        arrayHeaderMenuItemsValueTres = arrayHeaderMenuItemsValueTresPmtr;
+        arrayHeaderMenuItemsValueQuatro = arrayHeaderMenuItemsValueQuatroPmtr;
+    }
+
+    function traduzirArrayfooterItemsText(arrayfooterItemsTextValueUmPmtr, arrayfooterItemsTextValueDoisPmtr, arrayfooterItemsTextValueTresPmtr, arrayfooterItemsTextValueQuatroPmtr, arrayfooterItemsTextValueCincoPmtr, arrayfooterItemsTextValueSeisPmtr) {
+        arrayfooterItemsTextValueUm = arrayfooterItemsTextValueUmPmtr;
+        arrayfooterItemsTextValueDois = arrayfooterItemsTextValueDoisPmtr;
+        arrayfooterItemsTextValueTres = arrayfooterItemsTextValueTresPmtr;
+        arrayfooterItemsTextValueQuatro = arrayfooterItemsTextValueQuatroPmtr;
+        arrayfooterItemsTextValueCinco = arrayfooterItemsTextValueCincoPmtr;
+        arrayfooterItemsTextValueSeis = arrayfooterItemsTextValueSeisPmtr;
+    }
+
+    function traduzirRestanteTextos(buttonAssistaTrailerValuePmtr, exploreButtonValuePmtr, informativoValuePmtr, reserveJaTextValuePmtr, textMaxECholeValuePmtr, titleRetorneArcadiaBayValuePmtr, textReturnArcadiaBayValuePmtr, midiaTextValuePmtr, screenshotsTextValuePmtr, videosTextValuePmtr, reserveJaTextDownValuePmtr, mudarRegiaoTextValuePmtr, escolherJogoTextValuePmtr, escolherPlataformaValuePmtr, comprarGameValuePmtr, footerParagrafoValuePmtr) {
+        buttonAssistaTrailerValue = buttonAssistaTrailerValuePmtr;
+        exploreButtonValue = exploreButtonValuePmtr;
+        informativoValue = informativoValuePmtr;
+        reserveJaTextValue = reserveJaTextValuePmtr;
+        textMaxECholeValue = textMaxECholeValuePmtr;
+        titleRetorneArcadiaBayValue = titleRetorneArcadiaBayValuePmtr;
+        textReturnArcadiaBayValue = textReturnArcadiaBayValuePmtr;
+        midiaTextValue = midiaTextValuePmtr;
+        screenshotsTextValue = screenshotsTextValuePmtr;
+        videosTextValue = videosTextValuePmtr;
+        reserveJaTextDownValue = reserveJaTextDownValuePmtr;
+        mudarRegiaoTextValue = mudarRegiaoTextValuePmtr;
+        escolherJogoTextValue = escolherJogoTextValuePmtr;
+        escolherPlataformaValue = escolherPlataformaValuePmtr;
+        comprarGameValue = comprarGameValuePmtr;
+        footerParagrafoValue = footerParagrafoValuePmtr;
+    }
 
     if(idiomaSelecao[0].value === '1' && controleValueUm) {
         document.location.reload();
         controleValueUm = false;
         
     } else if(idiomaSelecao[0].value === '2') {
-        arrayMenuItems = ['arte', 'juego', 'comunidad', 'blog', 'bienes'];
-        arrayHeaderMenuItems = ['juegos destacados', 'noticias', 'loja', 'soporte'];
-        arrayfooterItemsText = ['aviso de cookies', 'terminos de uso', 'aviso de privacidad', 'centro de apoyo', 'política de uso de materiales', 'declaración de afiliado'];
-        [buttonAssistaTrailer.innerHTML, exploreButton.innerHTML, informativo.innerHTML, reserveJaText.innerHTML, textMaxECholeES.innerHTML, titleRetorneArcadiaBay.innerHTML, textReturnArcadiaBayES.innerHTML, midiaText.innerHTML, screenshotsText.innerHTML, videosText.innerHTML, reserveJaTextDown.innerHTML, mudarRegiaoText.innerHTML, escolherJogoText.innerHTML, escolherPlataforma.innerHTML, comprarGame.innerHTML, footerParagrafo.innerHTML] = ['ver el trailer', 'explorar', 'informativo', 'reservar ahora', "¡Regresa a Arcadia Bay y experimenta dos juegos galardonados de Life is Strange como nunca antes! Las imágenes y la animación remasterizadas dan nueva vida a un gran elenco de personajes e historias emocionantes. La colección Life is Strange Remastered incluye 'Life is Strange Remastered' y 'Life is Strange: Before the Storm Remastered'.", 'volver a la bahía de Arcadia', "Iluminado por su emblemático faro, este pequeño pueblo de la costa de Oregón tiene una historia llena de misterios: la desaparición de Rachel Amber, la corrupción del gobierno, secretos familiares, un enorme incendio forestal y una tormenta sobrenatural. Como Max y Chloe, tus elecciones darán forma al pasado, presente y futuro de Arcadia Bay.", 'medios de comunicación', 'capturas de pantalla', 'vídeos', 'reservar ahora', 'cambia región', 'selecciona tu juego', 'selecciona tu plataforma', 'compra', 'LA VIDA ES EXTRAÑA © 2015, 2021 Square Enix Limited. LA VIDA ES EXTRAÑA: ANTES DE LA TORMENTA © 2017, 2021 Square Enix Limited. LIFE IS STRANGE: ANTES DE LA TORMENTA LIFE IS STRANGE, LIFE IS STRANGE: ANTES DE LA TORMENTA, LIFE IS STRANGE 2, LIFE IS STRANGE: TRUE COLORS, SQUARE ENIX y el logotipo de SQUARE ENIX son marcas registradas o marcas comerciales del grupo de empresas Square Enix . Nintendo Switch es una marca comercial de Nintendo. DECK NINE y DECK NINE GAMES son marcas registradas de Idol Minds, LLC. DONTNOD y DONTNOD Entertainment son marcas registradas de DONTNOD Entertainment, S.A. Todas las demás marcas comerciales son propiedad de sus respectivos dueños.'];
+        traduzirArrayMenuItems('arte', 'juego', 'comunidad', 'blog', 'bienes');
+        traduzirArrayHeaderMenuItems('juegos destacados', 'noticias', 'loja', 'soporte');
+        traduzirArrayfooterItemsText('aviso de cookies', 'terminos de uso', 'aviso de privacidad', 'centro de apoyo', 'política de uso de materiales', 'declaración de afiliado');
+        traduzirRestanteTextos('ver el trailer', 'explorar', 'informativo', 'reservar ahora', "¡Regresa a Arcadia Bay y experimenta dos juegos galardonados de Life is Strange como nunca antes! Las imágenes y la animación remasterizadas dan nueva vida a un gran elenco de personajes e historias emocionantes. La colección Life is Strange Remastered incluye 'Life is Strange Remastered' y 'Life is Strange: Before the Storm Remastered'.", 'volver a la bahía de Arcadia', "Iluminado por su emblemático faro, este pequeño pueblo de la costa de Oregón tiene una historia llena de misterios: la desaparición de Rachel Amber, la corrupción del gobierno, secretos familiares, un enorme incendio forestal y una tormenta sobrenatural. Como Max y Chloe, tus elecciones darán forma al pasado, presente y futuro de Arcadia Bay.", 'medios de comunicación', 'capturas de pantalla', 'vídeos', 'reservar ahora', 'cambia región', 'selecciona tu juego', 'selecciona tu plataforma', 'compra', 'LA VIDA ES EXTRAÑA © 2015, 2021 Square Enix Limited. LA VIDA ES EXTRAÑA: ANTES DE LA TORMENTA © 2017, 2021 Square Enix Limited. LIFE IS STRANGE: ANTES DE LA TORMENTA LIFE IS STRANGE, LIFE IS STRANGE: ANTES DE LA TORMENTA, LIFE IS STRANGE 2, LIFE IS STRANGE: TRUE COLORS, SQUARE ENIX y el logotipo de SQUARE ENIX son marcas registradas o marcas comerciales del grupo de empresas Square Enix . Nintendo Switch es una marca comercial de Nintendo. DECK NINE y DECK NINE GAMES son marcas registradas de Idol Minds, LLC. DONTNOD y DONTNOD Entertainment son marcas registradas de DONTNOD Entertainment, S.A. Todas las demás marcas comerciales son propiedad de sus respectivos dueños.');
+
+    } else if(idiomaSelecao[0].value === '3') {
+        traduzirArrayMenuItems('kunst', 'spiel', 'gemeinschaft', 'blog', 'anwesen');
+        traduzirArrayHeaderMenuItems('vorgestellte spiele', 'nachricht', 'geschäft', 'mittel');
+        traduzirArrayfooterItemsText('cookie-hinweis', 'nutzungsbedingungen', 'hinweis zum datenschutz', 'hilfecenter', 'richtlinie zur materialnutzung', 'affiliate-erklärung');
+        traduzirRestanteTextos('sieh dir den trailer an', 'erkunden', 'informativ', 'jetzt reservieren', "Kehren Sie nach Arcadia Bay zurück und erleben Sie zwei preisgekrönte Life is Strange-Spiele wie nie zuvor! Überarbeitete Grafiken und Animationen erwecken eine große Anzahl spannender Charaktere und Handlungsstränge zu neuem Leben. Die Life is Strange Remastered Collection umfasst „Life is Strange Remastered“ und „Life is Strange: Before the Storm Remastered“.", 'rückkehr nach arcadia bay', "Diese kleine Stadt an der Küste Oregons, die von ihrem ikonischen Leuchtturm beleuchtet wird, hat eine Geschichte voller Geheimnisse: das Verschwinden von Rachel Amber, Korruption in der Regierung, Familiengeheimnisse, ein gewaltiger Waldbrand und ein unheimlicher Sturm. Wie bei Max und Chloe werden Ihre Entscheidungen die Vergangenheit, Gegenwart und Zukunft von Arcadia Bay prägen.", 'medien', 'screenshots', 'videos', 'jetzt reservieren', 'region ändern', 'wählen sie ihr spiel aus', 'wählen sie ihre plattform aus', 'kauft ein', 'LIFE IS STRANGE © 2015, 2021 Square Enix Limited. LIFE IS STRANGE: BEFORE THE STORM © 2017, 2021 Square Enix Limited. LIFE IS STRANGE: BEFORE THE STORM LIFE IS STRANGE, LIFE IS STRANGE: BEFORE THE STORM, LIFE IS STRANGE 2, LIFE IS STRANGE: TRUE COLORS, SQUARE ENIX und das SQUARE ENIX-Logo sind entweder eingetragene Marken oder Marken der Gruppe Square Enix Firmen. Nintendo Switch ist eine Marke von Nintendo. DECK NINE und DECK NINE GAMES sind eingetragene Marken von Idol Minds, LLC. DONTNOD und DONTNOD Entertainment sind eingetragene Marken von DONTNOD Entertainment, S.A. Alle anderen Marken sind Eigentum ihrer jeweiligen Inhaber.');
+    }
+
+    if(idiomaSelecao[0].value !== '1') {
+        arrayMenuItems = [arrayMenuItemsValueUm, arrayMenuItemsValueDois, arrayMenuItemsValueTres, arrayMenuItemsValueQuatro, arrayMenuItemsValueCinco];
+        arrayHeaderMenuItems = [arrayHeaderMenuItemsValueUm, arrayHeaderMenuItemsValueDois, arrayHeaderMenuItemsValueTres, arrayHeaderMenuItemsValueQuatro];
+        arrayfooterItemsText = [arrayfooterItemsTextValueUm, arrayfooterItemsTextValueDois, arrayfooterItemsTextValueTres, arrayfooterItemsTextValueQuatro, arrayfooterItemsTextValueCinco, arrayfooterItemsTextValueSeis];
+        [buttonAssistaTrailer.innerHTML, exploreButton.innerHTML, informativo.innerHTML, reserveJaText.innerHTML, textMaxECholeES.innerHTML, titleRetorneArcadiaBay.innerHTML, textReturnArcadiaBayES.innerHTML, midiaText.innerHTML, screenshotsText.innerHTML, videosText.innerHTML, reserveJaTextDown.innerHTML, mudarRegiaoText.innerHTML, escolherJogoText.innerHTML, escolherPlataforma.innerHTML, comprarGame.innerHTML, footerParagrafo.innerHTML] = [buttonAssistaTrailerValue, exploreButtonValue, informativoValue, reserveJaTextValue, textMaxECholeValue, titleRetorneArcadiaBayValue, textReturnArcadiaBayValue, midiaTextValue, screenshotsTextValue, videosTextValue, reserveJaTextDownValue, mudarRegiaoTextValue, escolherJogoTextValue, escolherPlataformaValue, comprarGameValue, footerParagrafoValue];
 
         for(let i in menuItems) {
             menuItems[i].innerHTML = arrayMenuItems[i];
@@ -302,8 +363,9 @@ function mudarIdioma() {
             footerItemsText[i].innerHTML = arrayfooterItemsText[i];
         }
         
+        
         controleValueUm = true;
     }
-
+    
     localStorage.setItem('idioma', idiomaSelecao[0].value)
 }
