@@ -1123,10 +1123,19 @@ header {
     transition: all 200ms ease-in-out;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
     z-index: 10;
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
 }
 
 .topo-scroll:hover {
     padding: 2px;
+}
+
+.topo-scroll--aparecer {
+    opacity: 1 !important;
+    cursor: pointer !important;
+    pointer-events: all !important;
 }
 
 .topo-scroll svg {
