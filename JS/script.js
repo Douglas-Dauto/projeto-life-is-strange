@@ -251,6 +251,7 @@ function scrollText(translateValue = 60) {
 }
 
 const idiomaSelecao = document.querySelectorAll('.select-idioma-footer-008');
+idiomaSelecao[0].value = localStorage.getItem('idioma');
 const idiomas = ['portugues', 'espanol', 'deutsch', 'italianoIT', 'françaisFR', 'englishNL', 'englishUK', 'englishUS'];
 
 setInterval(() => mudarIdioma(), 1000);
@@ -303,4 +304,6 @@ function mudarIdioma() {
         
         controleValueUm = true;
     }
+
+    localStorage.setItem('idioma', idiomaSelecao[0].value)
 }
