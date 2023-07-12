@@ -1,3 +1,4 @@
+(function() {
 let div = document.querySelectorAll('div.dentro-border-img-3-true-remastered-lis-2-972')
 let divConsoles = document.getElementsByClassName('img-item-6-1-a-6-forma-console-fonte-187')
 let showDiv = document.getElementById('show-div')
@@ -387,3 +388,35 @@ function mudarIdioma() {
     
     localStorage.setItem('idioma', idiomaSelecao[0].value);
 }
+
+const videosTextId = window.document.getElementById('div-midia-screenshots-videos-text-videos');
+const screenshotsTextId = window.document.getElementById('div-midia-screenshots-videos-text-screenshots');
+const containerVideo = window.document.getElementsByClassName('div-cobrindo-imagens-4-all-033');
+
+screenshotsTextId.addEventListener('click', (e) => {
+    document.location.reload();
+});
+
+videosTextId.addEventListener('click', (e) => {
+    for(let i = 0; i < containerVideo.length; i++) {
+        let src;
+
+        switch(i) {
+            case 0:
+                src = 'https://www.youtube.com/embed/TI3AMPKEPmQ';
+                break;
+            case 1: 
+                src = 'https://www.youtube.com/embed/AURVxvIZrmU';
+                break;
+            case 2:
+                src = 'https://www.youtube.com/embed/o69FMYlJ_48';
+                break;
+            case 3:
+                src = 'https://www.youtube.com/embed/jY5neHkqT_Y';
+                break;
+        }
+
+        containerVideo[i].innerHTML = `<iframe width="560" height="315" src="${src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    }
+});
+})();
