@@ -13,7 +13,7 @@
 
 .body-LIS {
     background-color: #fff;
-    background: url(imagens/BG-02.png);
+    background: url(../imagens/BG-02.png);
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
@@ -470,7 +470,7 @@ header {
 .img-max-e-chloe-div-1-2-075{
     display: inline-block;
     vertical-align: middle;
-    background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+    background: url(../imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 562.67px;
@@ -489,7 +489,7 @@ header {
 .img-return-bay-arcadia-div-2-2-029{
     vertical-align: middle;
     display: inline-block;
-    background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+    background: url(../imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -680,7 +680,7 @@ header {
 }
 
 #selecao-imagens-4-midia-screenshots-011{
-    background: url(imagens/LIS-Midia-01.png);
+    background: url(../imagens/LIS-Midia-01.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -692,7 +692,7 @@ header {
 }
 
 #selecao-imagens-4-midia-screenshots-012{
-    background: url(imagens/LIS-Midia-02.png);
+    background: url(../imagens/LIS-Midia-02.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -704,7 +704,7 @@ header {
 }
 
 #selecao-imagens-4-midia-screenshots-013{
-    background: url(imagens/LIS-Midia-03.png);
+    background: url(../imagens/LIS-Midia-03.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -716,7 +716,7 @@ header {
 }
 
 #selecao-imagens-4-midia-screenshots-014{
-    background: url(imagens/LIS-Midia-04.png);
+    background: url(../imagens/LIS-Midia-04.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -827,19 +827,19 @@ header {
 }
 
 #div-3-img-bg-id-compre-ja-true-remastered-lis-2-924{
-    background: url(imagens/LIS-Compre-Ja-3-01.png);
+    background: url(../imagens/LIS-Compre-Ja-3-01.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-3-img-bg-id-compre-ja-true-remastered-lis-2-910{
-    background: url(imagens/LIS-Compre-Ja-3-02.png);
+    background: url(../imagens/LIS-Compre-Ja-3-02.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-3-img-bg-id-compre-ja-true-remastered-lis-2-118{
-    background: url(imagens/LIS-Compre-Ja-3-03.png);
+    background: url(../imagens/LIS-Compre-Ja-3-03.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -918,38 +918,38 @@ header {
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-801{
-    background: url(imagens/img-forma-console-01.png);
+    background: url(../imagens/img-forma-console-01.png);
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-802{
-    background: url(imagens/img-forma-console-02.png);
+    background: url(../imagens/img-forma-console-02.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-803{
-    background: url(imagens/img-forma-console-03.png);
+    background: url(../imagens/img-forma-console-03.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-804{
-    background: url(imagens/img-forma-console-04.png);
+    background: url(../imagens/img-forma-console-04.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-805{
-    background: url(imagens/img-forma-console-05.png);
+    background: url(../imagens/img-forma-console-05.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #div-img-id-6-cada-forma-console-1-a-6-806{
-    background: url(imagens/img-forma-console-06.png);
+    background: url(../imagens/img-forma-console-06.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -962,7 +962,7 @@ header {
 }
 
 .div-img-max-001{
-    background: url('Life-is-Strange-bg4.png');
+    background: url('../imagens/Life-is-Strange-bg4.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1176,7 +1176,7 @@ header {
     .img-max-e-chloe-div-1-2-075{
         width: 100% !important;
         height: 60vw;
-        background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+        background: url(../imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
         background-repeat: no-repeat;
         background-size: 100vw 60vw;
 
@@ -1201,7 +1201,7 @@ header {
     .img-return-bay-arcadia-div-2-2-029{
         width: 100% !important;
         height: 60vw;
-        background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+        background: url(../imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
         background-size: 100vw 60vw;
         background-repeat: no-repeat;
     }
@@ -1402,7 +1402,7 @@ header {
     .img-max-e-chloe-div-1-2-075{
         width: 100%;
         height: 60vw;
-        background: url(imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
+        background: url(../imagens/lis1-sQxAoKA0t-Max-e-Chloe.png);
         background-repeat: no-repeat;
         background-size: 100vw 60vw;
 
@@ -1420,7 +1420,7 @@ header {
     .img-return-bay-arcadia-div-2-2-029{
         width: 100%;
         height: 60vw;
-        background: url(imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
+        background: url(../imagens/bts1-1refHRrP4-Rachel-e-Chloe.png);
         background-size: 100vw 60vw;
         background-repeat: no-repeat;
     }
@@ -1978,7 +1978,7 @@ header {
 }
 @media screen and (max-width: 1082px) {
     .img-div-max-011{
-        background: url(imagens/lis-re-max-chloe-mastered.png);
+        background: url(../imagens/lis-re-max-chloe-mastered.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
