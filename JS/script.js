@@ -260,7 +260,11 @@ if(localStorage.getItem('idioma')) {
 
 const idiomas = ['portugues', 'espanol', 'deutsch', 'italianoIT', 'françaisFR', 'englishNL', 'englishUK', 'englishUS'];
 
-setInterval(() => mudarIdioma(), 1000);
+setInterval(() => {
+    if(idiomaSelecao[0].value !== localStorage.getItem('idioma')) {
+        mudarIdioma();
+    }
+}, 1000);
 
 function mudarIdioma() {
     const menuItems = document.getElementsByClassName('item-li-cabecalho');
